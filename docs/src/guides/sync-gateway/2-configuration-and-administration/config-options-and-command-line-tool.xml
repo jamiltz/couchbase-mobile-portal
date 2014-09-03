@@ -146,7 +146,10 @@ $ sync_gateway config.json
             <paragraph>The following command starts Sync Gateway with the parameters specified in a configuration file named config.json and adds additional logging by including the -log option on the command line:</paragraph>
             <code-block>
 $ sync_gateway -log=HTTP+,CRUD config.json
-</code-block>
+            </code-block>
+            <paragraph>The following command starts Sync Gateway with the parameters specified in a remote configuration file accessed via HTTP. You can use this on a sync_gateway cluster to ensure all instances are running with the same configuration.</paragraph>
+            <code-block>sync_gateway  http://www.example.com/sync_gateway/config/config.json</code-block>
+            
          </body>
       </topic>
    </topics>
