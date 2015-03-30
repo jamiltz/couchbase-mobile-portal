@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guide xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../docs.xsd" id="iOSTutorial">
+     <title>Couchbase Lite (Mobile) Tutorial for iOS</title>
+     <description></description>
+
+     <introduction>Intro
+     </introduction>
+     <articles>
+          <article id="art1">
+               <title>Do Something.</title>
+               <description></description>
+               <introduction>
+                    <paragraph>
+                    </paragraph>
+               </introduction>
+          </article>
+     </articles>
+</guide>

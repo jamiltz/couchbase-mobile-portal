@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guide xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../docs.xsd" id="androidTutorial">
+     <title>Couchbase Lite (Mobile) Tutorial for Android</title>
+     <description>This Couchbase Lite Tutorial is based on Android code written in Eclipse Kepler (IDE) on a MacBook Pro (16 GB RAM), with Couchbase Lite version 1.0.3.1. Throughout the tutorial we will reference screen shots and Java code. If you are using another OS, and IDE or language, we will share more about iOS/Xcode projects in a subsequent tutorial.</description>
+
+     <introduction>
+by Laurent Weichberger
+(Version 7 ~ Revised: Feb. 20, 2015)
+
+This Couchbase Lite Tutorial is based on Android code written in Eclipse Kepler (IDE) on a MacBook Pro (16 GB RAM), with Couchbase Lite version 1.0.3.1. Throughout the tutorial we will reference screen shots and Java code. If you are using another OS, and IDE or language, we will share more about iOS/Xcode projects in a subsequent tutorial.
+     </introduction>
+     <articles>
+          <article id="success-setup">
+               <title>Setup your Environment for Success.</title>
+               <description>Create handle to Couchbase Lite database, init config.</description>
+               <introduction>
+                    <paragraph>
+                         The first thing we need to do is get all of our software in place, and configured properly. We will be using the Couchbase Lite 1.0.3 download, as well as Eclipse and Android. Some of the jar files will need to be moved to their proper places after download, so we have given you step by step instructions on how to install all the software properly before we start developing.
+                    </paragraph>
+               </introduction>
+               <topics>
+                    <topic id="eclipse-conf">
+                         <title>Let’s start with Eclipse.</title>
+                         <body>
+                          <ordered-list>
+                            <list-item>Make sure Eclipse 4.4.x or more recent is being used.</list-item>
+                            <list-item>Within Eclipse use the menu option: Help > Install New Software to install the “ADT Plugin” for Android development: <external-ref href="https://dl-ssl.google.com/android/eclipse/">https://dl-ssl.google.com/android/eclipse/</external-ref></list-item>
+                            <list-item>If you have difficulty with this step, go here: http://developer.android.com/sdk/installing/installing­adt.html</list-item>
+                            <list-item>If you do this properly, you will have a new selection from the menu in Eclipse > Window > Android SDK Manager:<paragraph><image alt="Android SDK Manager" href="images/image002.png"/></paragraph></list-item>
+                            <list-item>Find Android 4.4.2 (API 19) in the list and click the checkboxes for:SDK Platform &amp; ARM EABI v7a System Image &amp; Google APIs (ARM System Image), and click “Install Packages”:<paragraph><image alt="Select Platform" href="images/image004.png"/></paragraph></list-item>
+                            <list-item>Next you will need an Android Virtual Device (AVD):
+                              <ordered-list>
+                              <list-item>Go to Eclipse > Window >Android Virtual Device Manager and click on “Create,” to create the AVD with a target of 4.4.2.<paragraph><image href="images/image006.png"/></paragraph></list-item>
+                              <list-item>Click OK and then Start the AVD, which should run as something like this on your desktop:<paragraph><image href="images/image008.png"/></paragraph></list-item>
+                              </ordered-list>
+                            </list-item>
+
+
+                        </ordered-list>
+               
+                         </body>
+                    </topic>
+
+
+                    <topic id="cbLiteSDK">
+                         <title>Next we need to grab the Couchbase Lite SDK.</title>
+                         <body>
+                          <ordered-list>
+                            <list-item>Download Couchbase Lite v. 1.0.3.1 or more recent: navigate to: <external-ref href="http://www.couchbase.com/nosql-databases/downloads#Couchbase_Mobile">http://www.couchbase.com/nosql-databases/downloads#Couchbase_Mobile</external-ref><paragraph><image href="images/image010.png"/></paragraph><paragraph><image href="images/image012.png"/></paragraph></list-item>
+                          </ordered-list>
+                         </body>
+                    </topic>
+
+
+                    <topic id="cbLiteSDK">
+                         <title>Download the Sync Gateway v. 1.0.3. or more recent:</title>
+                         <body>
+                          <ordered-list>
+                            <list-item>Navigate to: <external-ref href="http://www.couchbase.com/nosql-databases/downloads#Couchbase_Mobile">http://www.couchbase.com/nosql-databases/downloads#Couchbase_Mobile</external-ref><paragraph><image href="images/image014.png"/></paragraph><paragraph><image href="images/image012.png"/></paragraph></list-item>
+                            <list-item>The download file once extracted will contain:<paragraph><image href="images/image016.png"/></paragraph>
+                            <paragraph>We will be using the Sync Gateway later in the tutorial, so stand by for further instructions, now that you have it downloaded.</paragraph>
+                            </list-item>
+                          </ordered-list>
+                         </body>
+                    </topic>
+               </topics>
+               
+          </article>
+          
+          <article id="devEnv">
+               <title>Development Environment.</title>
+               <description>Setup your development environment.</description>
+               <introduction>
+                    <paragraph>
+                         Okay great, we are almost ready to get started with application development, we just need a project to work with.
+                    </paragraph>
+               </introduction>
+          </article>
+     </articles>
+</guide>
