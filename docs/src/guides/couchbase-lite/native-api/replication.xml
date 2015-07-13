@@ -66,7 +66,7 @@
                         push.setAuthenticator(auth);
                         pull.setAuthenticator(auth);
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         var url = new Uri("https://example.com/mydatabase/");
                         var push = database.CreatePushReplication(url);
                         var pull = database.CreatePullReplication(url);
@@ -141,7 +141,7 @@
                         this.push = push;
                         this.pull = pull;
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         push.Changed += (sender, e) => 
                         {
                             // Will be called when the push replication status changes
@@ -255,7 +255,7 @@
                             params.put("name", "Waldo");
                             push.setFilterParams(params);
                         ]]></code-block>
-                        <code-block language="C#"><![CDATA[
+                        <code-block language="c#"><![CDATA[
                             // Define a filter that matches only docs with a given "owner" property.
                             // The value to match is given as a parameter named "name":
                             database.SetFilter("byOwner", (revision, filterParams) =>
@@ -300,7 +300,7 @@
                             channels.add("sales");
                             pull.setChannels(channels);
                         ]]></code-block>
-                        <code-block language="C#"><![CDATA[
+                        <code-block language="c#"><![CDATA[
                             // Set up a channel-filtered pull replication that will pull only
                             // docs in the "sales" channel from the Sync Gateway:
                             var pull = database.CreatePullReplication(url);
@@ -445,7 +445,7 @@
                             }
                         });
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         // The replication reporting the notification is either
                         // the push or the pull, but we want to look at the
                         // aggregate of both the push and pull.

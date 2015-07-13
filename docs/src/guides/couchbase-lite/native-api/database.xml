@@ -143,7 +143,7 @@
                        return;
                    }
                   ]]></code-block>
-               <code-block language="C#"><![CDATA[
+               <code-block language="c#"><![CDATA[
                   var db = Manager.SharedInstance.GetDatabase("my-database");
                   if (db == null) 
                   {
@@ -285,7 +285,7 @@
                        return;
                    }
                   ]]></code-block>
-               <code-block language="C#"><![CDATA[
+               <code-block language="c#"><![CDATA[
                   database.Changed += (sender, e) => {
                       var changes = e.Changes.ToList();
                       foreach (DocumentChange change in changes) {
@@ -342,7 +342,7 @@
                        return;
                   }
                   ]]></code-block>
-               <code-block language="C#"><![CDATA[
+               <code-block language="c#"><![CDATA[
                   try {
                       database.Delete();
                   } catch (CouchbaseLiteException e) {

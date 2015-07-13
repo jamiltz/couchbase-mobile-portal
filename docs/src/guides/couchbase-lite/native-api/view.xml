@@ -59,7 +59,7 @@
                         }
                     }, "2");
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         // Create a view and register its map function:
                         var view = database.GetView("phones");
                         view.SetMap((doc, emit) =>
@@ -159,10 +159,15 @@
             <title>The source document, and redirection</title>
             <body>
                 <paragraph>
-                    In addition to its key and value, every index row also remembers the ID of the document that emitted it. This can be accessed at query time via the <code>QueryRow.documentID</code> property, or more commonly via the shortcut <code>QueryRow.document</code> which uses the ID to load the Document object.
+                    In addition to its key and value, every index row also remembers the ID of the document that emitted it. This
+                    can be accessed at query time via the <code>QueryRow.documentID</code> property, or more commonly via the
+                    shortcut <code>QueryRow.document</code> which uses the ID to load the Document object.
                 </paragraph>
                 <paragraph>
-                    It can sometimes be useful to redirect this reference, i.e. to make the index row point to a different document instead. You do this by emitting a value that's a dictionary with a key <code>_id</code> whose value is the document ID you want the row to reference. The <code>QueryRow.documentID</code> and <p>QueryRow.document</p> accessors will then use this document ID instead.
+                    It can sometimes be useful to redirect this reference, i.e. to make the index row point to a different document
+                    instead. You do this by emitting a value that's a dictionary with a key <code>_id</code> whose value is the
+                    document ID you want the row to reference. The <code>QueryRow.documentID</code> and <code>QueryRow.document</code>
+                    accessors will then use this document ID instead.
                 </paragraph>
                 <code-set>
                     <code-block language="objective-c"><![CDATA[
@@ -275,7 +280,7 @@
                         }
                     }, "2");
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         // Create a view and register its map and reduce functions:
                         var view = database.GetView("phones");
                         view.SetMapReduce((doc, emit) => 
@@ -317,7 +322,7 @@
                     }
                     return new Double(total);
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         var total = 0.0;
                         foreach(var value in values.ToList())
                         {
@@ -408,7 +413,7 @@
                         }
                     }, "2");
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         // Create a view and register its map and reduce functions:
                         let phoneView = database.GetView("phones");
                         phoneView.SetMapReduce((doc, emit) =>

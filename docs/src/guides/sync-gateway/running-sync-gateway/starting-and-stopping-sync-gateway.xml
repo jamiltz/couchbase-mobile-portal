@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xi="http://www.w3.org/2001/XInclude"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:noNamespaceSchemaLocation="../../../docs.xsd"
+   id="starting-sync-gateway">
+   <title>Starting and stopping Sync Gateway</title>
+   <description>Learn how to start and stop Sync Gateway.</description>
+   <related>
+      <item><ref href="../configuration/configuration/config-properties.xml">Configuration properties</ref></item>
+      <item> <ref href="../configuration/command-line-options.xml">Command-line options</ref></item>
+   </related>
+   <introduction>This article explains how to start and stop Sync Gateway. </introduction>
+   <topics>
+      <topic id="starting-sg">
+         <title>Starting Sync Gateway</title>
+         <body>
+      <paragraph>You start Sync Gateway by running the executable file <code>sync_gateway</code> from the command line:</paragraph>
+      <code-block>
+         $ ./sync_gateway
+      </code-block>
+      <note>For convenience, you can add the <code>bin</code> directory that contains the executable file to your <code>PATH</code>
+         environment variable.</note>
+      <paragraph>In the command above, neither a configuration file nor command-line options were specified. In this case, default values
+         are used. The command above starts a Sync Gateway instance and connects to the built-in, in-memory database Walrus. Sync Gateway
+         listens on port 4984 for Sync API commands, and listens on port 4985 for Admin API commands.</paragraph>
+      <paragraph>Optionally, you can specify a configuration file, a JSON file that contains Sync Gateway configuration properties. The following
+         command starts Sync Gateway using the config file <code>config.json</code>:</paragraph>
+      <code-block>
+         $ ./sync_gateway config.json
+      </code-block>
+      <paragraph>Optionally, if you mainly want to use default configuration properties but want to change a small number of
+         properties, you can specify command-line options when you start Sync Gateway. The following command starts Sync Gateway and
+         specifies the address of a Couchbase Server instance (instead of using the default database server, which is Walrus):</paragraph>
+      <code-block>
+         $ ./sync_gateway -url http://cbserver:8099
+      </code-block>
+      <paragraph>For information about the configuration file, see the article
+         <ref href="../configuration/config-properties.xml">Configuration properties</ref>. For information about command-line options, see the article
+         <ref href="../configuration/command-line-options.xml">Command-line options</ref>.</paragraph>
+   </body>
+   </topic>
+      <topic id="stopping-sg">
+      <title>Stopping Sync Gateway</title>
+         <body>
+         <paragraph>In the case of maintenance or for other operations, you can stop Sync Gateway by typing Control-C.
+            There is no specific shutdown procedure and it is safe to stop Sync Gateway at any time.</paragraph>
+         </body>
+      </topic>
+   </topics>
+   </article>

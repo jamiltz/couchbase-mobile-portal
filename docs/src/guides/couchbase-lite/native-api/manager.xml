@@ -95,7 +95,7 @@
                       }
                   }
                   ]]></code-block>
-                <code-block language="C#"><![CDATA[
+                <code-block language="c#"><![CDATA[
                   var manager = Manager.SharedInstance;
                   Debug.Assert(manager != null);
                   ]]>
@@ -142,7 +142,7 @@
                           }
                           ]]>
                        </code-block>
-                       <code-block language="C#"><![CDATA[
+                       <code-block language="c#"><![CDATA[
                           var dirInfo = Directory.CreateDirectory(dbPath);
                           Manager manager;
                           try 
@@ -217,7 +217,7 @@
                       }
                   }
                   ]]></code-block>
-                <code-block language="C#"><![CDATA[
+                <code-block language="c#"><![CDATA[
                   var options = new ManagerOptions();
                   options.ReadOnly = true;
                   Manager manager;

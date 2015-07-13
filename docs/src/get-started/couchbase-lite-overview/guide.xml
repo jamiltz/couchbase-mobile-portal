@@ -4,45 +4,54 @@
  xsi:noNamespaceSchemaLocation="../../docs.xsd"
  id="couchbase-lite-overview">
  <title>Couchbase Lite Overview</title>
- <description>This guide will help you better understand how Couchbase Lite works and integrates across the solution.</description>
+ <description>This article will help you better understand how Couchbase Lite works and integrates across a Couchbase Mobile solution.</description>
  <introduction>
-  <paragraph>This guide will help you understand some of Couchbase Lite features, which is a local storage system that is integrated in your application and is available across native platforms as well with REST API support. Couchbase Lite is a fully functional on-device native embedded JSON database for mobile devices that can work standalone, in a P2P network and connects with Sync Gateway.</paragraph>
-
-  <paragraph>We will begin to explore some of the features of Couchbase Lite in the Articles section.</paragraph>
-
-     <topic id="features">
+  <paragraph>This guide will help you understand some of Couchbase Lite features, which is a local storage system that is integrated
+      in your application and is available across native platforms as well with REST API support. Couchbase Lite is a fully functional
+      on-device native embedded JSON database for mobile devices that can work standalone, in a P2P network and connects with Sync Gateway.</paragraph>
+ </introduction>
+<topics>
+    <topic id="features">
          <title>Features</title>
          <body>
-             <paragraph>Couchbase Lite library provides data persistance directly on your device with full CRUD operations that is flexible to your mobile feature developments.</paragraph>
-
+             <paragraph>Couchbase Lite library provides data persistance directly on your device with full CRUD operations that is
+                 flexible to your mobile feature developments.</paragraph>
 
              <section id="flexible-data-model">
                  <title>Flexible Data Model</title>
                  <body>
-                     <paragraph>Often times in mobile, feature specs are constantly changing and re-evaluated so Couchbase Mobile uses JSON data format throughout the stack without you having to rigidly define the data layout ahead of time. Complex design and migration time can be saved on any new updates as the data layout is essentially free-form in structure. The available native platform APIs allow JSON structures to map database documents to an application object model.</paragraph>
+                     <paragraph>Often times in mobile, feature specs are constantly changing and re-evaluated so Couchbase Mobile uses
+                         JSON data format throughout the stack without you having to rigidly define the data layout ahead of time. Complex
+                         design and migration time can be saved on any new updates as the data layout is essentially free-form in structure.
+                         The available native platform APIs allow JSON structures to map database documents to an application object model.</paragraph>
                  </body>
              </section>
 
              <section id="always-available">
                  <title>Always Available Data</title>
                  <body>
-                     <paragraph>Data is stored locally on the device where data is decoupled and not dependent on network connectivity. With offline functionality, the stored data model attributes are in local JSON documents where you are able to have full access and control over.  This translates into complete offline support without requiring REST requests for content.</paragraph>
+                     <paragraph>Data is stored locally on the device where data is decoupled and not dependent on network connectivity.
+                         With offline functionality, the stored data model attributes are in local JSON documents where you are able to have
+                         full access and control over.  This translates into complete offline support without requiring REST requests for content.</paragraph>
                  </body>
              </section>
-
          </body>
      </topic>
-
      <topic id="crud-operations">
          <title>CRUD Operations</title>
          <body>
-             <paragraph>Within this overview, we will explore how Couchbase Lite library provides data persistance directly on your device with full CRUD operations support.</paragraph>
-             <paragraph>Data will be stored in a Document that is referenced by an unique ID within the Couchbase Lite database. Your data documents will consist of arbitrary JSON objects not enforced by rigid schemas. This provides an advantage of designing data models that can be naturally nested like a dictionary throughout the object model it is representing. This can be as natural or complex as needed when the data model is extended.</paragraph>
+             <paragraph>Within this overview, we will explore how Couchbase Lite library provides data persistance directly on your device
+                 with full CRUD operations support.</paragraph>
+             <paragraph>Data will be stored in a Document that is referenced by an unique ID within the Couchbase Lite database. Your data
+                 documents will consist of arbitrary JSON objects not enforced by rigid schemas. This provides an advantage of designing data 
+                 models that can be naturally nested like a dictionary throughout the object model it is representing. This can be as natural
+                 or complex as needed when the data model is extended.</paragraph>
 
              <section id="create">
                  <title>Create</title>
                  <body>
-                     <paragraph>When dealing with data in Couchbase Mobile, we create documents that store Keys and their Values.  Once there is content within a document, we can add that document to the database. </paragraph>
+                     <paragraph>When dealing with data in Couchbase Mobile, we create documents that store Keys and their Values. Once there is
+                         content within a document, we can add that document to the database. </paragraph>
 
                      <paragraph>Begin by creating an empty document through the Document class.</paragraph>
                      <code-set>
@@ -52,7 +61,7 @@
                         <code-block language="java"><![CDATA[
                             Document document = database.createDocument();
                         ]]></code-block>
-                        <code-block language="C#"><![CDATA[
+                        <code-block language="c#"><![CDATA[
                             Document document = database.CreateDocument();
                         ]]></code-block>
                         <code-block language="swift"><![CDATA[
@@ -65,9 +74,11 @@
              <section id="retrieve">
                  <title>Retrieve</title>
                  <body>
-                     <paragraph>Once a document is populated with content, we can save it to the database.  The to retrieve the document from the database, we first simply obtain the document's ID. </paragraph>
+                     <paragraph>Once a document is populated with content, we can save it to the database. The to retrieve the document from
+                         the database, we first simply obtain the document's ID. </paragraph>
 
-                     <paragraph>Assuming that the ID is stored in a variable named, 'documentID', then can programmatically call 'getDocument' to retrieve the appropriate document. </paragraph>
+                     <paragraph>Assuming that the ID is stored in a variable named, 'documentID', then can programmatically call 'getDocument'
+                         to retrieve the appropriate document. </paragraph>
 
                      <code-set>
                         <code-block language="objective-c"><![CDATA[
@@ -76,7 +87,7 @@
                         <code-block language="java"><![CDATA[
                             Document retrievedDocument = database.getDocument(documentID);
                         ]]></code-block>
-                        <code-block language="C#"><![CDATA[
+                        <code-block language="c#"><![CDATA[
                             Document retrievedDocument = database.GetDocument(documentID);
                         ]]></code-block>
                         <code-block language="swift"><![CDATA[
@@ -90,9 +101,11 @@
                  <title>Update</title>
                  <body>
 
-                     <paragraph>When entering new entries within an existing document, updating the document of interest is similar to when creating a new one.</paragraph>
+                     <paragraph>When entering new entries within an existing document, updating the document of interest is similar to when
+                         creating a new one.</paragraph>
 
-                     <paragraph>Simply create a new object that contains the object map of keys to values and then save the object into the document that had been previously created.</paragraph>
+                     <paragraph>Simply create a new object that contains the object map of keys to values and then save the object into the
+                         document that had been previously created.</paragraph>
 
                      <code-set>
                         <code-block language="objective-c"><![CDATA[
@@ -113,7 +126,7 @@
 
                             retrievedDocument.putProperties(updatedProperties);
                         ]]></code-block>
-                        <code-block language="C#"><![CDATA[
+                        <code-block language="c#"><![CDATA[
                             var updatedProperties = doc.Properties;
                             updatedProperties["new item"] = "adding new entry into existing document";
                             updatedProperties["Database Used"] = "My database is Couchbase Mobile";
@@ -133,7 +146,10 @@
                         ]]></code-block>
                      </code-set>
 
-      <paragraph>With the snippet of code above, we created a new HashMap object and populated the object with existing data from a document, 'retrievedDocument', by calling the 'getProperties()' method.  Then we added a new key entry with the value, "adding new entry into existing document".  And updating an existing key is just the same as adding a new entry.  Then we save the object with new items back into our original, 'retrievedDocument'.</paragraph>
+      <paragraph>With the snippet of code above, we created a new HashMap object and populated the object with existing data from a
+          document, 'retrievedDocument', by calling the 'getProperties()' method.  Then we added a new key entry with the value,
+          "adding new entry into existing document".  And updating an existing key is just the same as adding a new entry. Then we
+          save the object with new items back into our original, 'retrievedDocument'.</paragraph>
 
                  </body>
              </section>
@@ -141,7 +157,8 @@
              <section id="delete">
                  <title>Delete</title>
                  <body>
-                     <paragraph>After a document has been entered into the database, deleting it is simply as calling the 'delete()' method on the document of interest.  </paragraph>
+                     <paragraph>After a document has been entered into the database, deleting it is simply as calling the 'delete()'
+                         method on the document of interest.  </paragraph>
 
                      <code-set>
                         <code-block language="objective-c"><![CDATA[
@@ -153,7 +170,7 @@
                         <code-block language="java"><![CDATA[
                             retrievedDocument.delete();
                         ]]></code-block>
-                        <code-block language="C#"><![CDATA[
+                        <code-block language="c#"><![CDATA[
                             retrievedDocument.Delete();
                         ]]></code-block>
                         <code-block language="swift"><![CDATA[
@@ -171,7 +188,7 @@
          </body>
      </topic>
 
-    <topic>
+    <topic id="summary">
         <title>Summary and Learning More</title>
         <body>
             <paragraph>
@@ -179,12 +196,15 @@
                 Couchbase Lite APIs is available across all the native mobile platforms along with desktop support.
             </paragraph>
             <paragraph>
-                To learn more, see the <ref href="../../guides/couchbase-lite/set.xml">Couchbase Lite Guides section</ref> for developer descriptions on the Native APIs and how-tos.  Then try building a Couchbase Lite mobile app over in the 'Training' section of the 'Develop' tab to get up and running.
+                To learn more, see the <ref href="../../guides/couchbase-lite/set.xml">Couchbase Lite Guides section</ref> for
+                developer descriptions on the Native APIs and how-tos.  Then try building a Couchbase Lite mobile app over in the
+                'Training' section of the 'Develop' tab to get up and running.
             </paragraph>
             <paragraph>
-                Next, we explore 'What is Sync Gateway' and how to sync your data to the cloud.  And we will explore some of the features on replicating and routing data to specific users.
+                Next, we explore 'What is Sync Gateway' and how to sync your data to the cloud.  And we will explore some of the
+                features on replicating and routing data to specific users.
             </paragraph>
         </body>
     </topic>
- </introduction>
+</topics>
 </guide>

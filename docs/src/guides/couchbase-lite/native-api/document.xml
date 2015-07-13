@@ -70,7 +70,7 @@
                         Document document = database.createDocument();
                         document.putProperties(properties); 
 							]]></code-block>
-                            <code-block language="C#"><![CDATA[
+                            <code-block language="c#"><![CDATA[
                                 var document = database.CreateDocument();
                                 var properties = new Dictionary<string, object>()
                                     {
@@ -123,7 +123,7 @@
                                     Log.e(TAG, "Cannot save document", e);
                                 }
                             ]]></code-block>
-                            <code-block language="C#"><![CDATA[
+                            <code-block language="c#"><![CDATA[
                                 var properties = new Dictionary<string, object>
                                     {
                                         {"title", "Little, Big"},
@@ -174,7 +174,7 @@
                                 Map<String, Object> properties = doc.getProperties();
                                 String owner = (String) properties.get("owner");
                             ]]></code-block>
-                            <code-block language="C#"><![CDATA[
+                            <code-block language="c#"><![CDATA[
                                 var doc = database.GetDocument(myDocId);
                                 // We can directly access properties from the document object:
                                 doc.GetProperty("title");
@@ -225,7 +225,7 @@
                                     e.printStackTrace();
                                 }
                             ]]></code-block>
-                            <code-block language="C#"><![CDATA[
+                            <code-block language="c#"><![CDATA[
                                 var doc = database.GetDocument(myDocId);
                                 var p = new Dictionary<string, object>(doc.Properties)
                                     {
@@ -277,7 +277,7 @@
                                     }
                                 });
                             ]]></code-block>
-                            <code-block language="C#"><![CDATA[
+                            <code-block language="c#"><![CDATA[
                                 var doc = database.GetDocument(myDocId);
                                 doc.Update((UnsavedRevision newRevision) => 
                                 {
@@ -327,7 +327,7 @@
                                 Document task = (Document) database.getDocument("task1");
                                 task.delete(); 
 							]]></code-block>
-                            <code-block language="C#"><![CDATA[
+                            <code-block language="c#"><![CDATA[
                                 var doc = database.GetDocument(myDocId);
                                 doc.Delete();
                             ]]></code-block>
@@ -382,7 +382,7 @@
                                     }
                                 })
                           ]]></code-block>
-                          <code-block language="C#"><![CDATA[
+                          <code-block language="c#"><![CDATA[
                                 var doc = database.GetDocument(myDocId);
                                 doc.Update((UnsavedRevision newRevision) => 
                                 {
@@ -446,7 +446,7 @@
                      }); 
                      doc.createRevision().save();
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         var doc = database.CreateDocument();
                         doc.Change += (sender, e) =>
                         {
@@ -628,7 +628,7 @@
                             }
                         }
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         var doc = database.GetDocument(myDocId);
                         var conflicts = doc.ConflictingRevisions.ToList();
                         if (conflicts.Count > 1)

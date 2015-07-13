@@ -53,7 +53,7 @@
                         query.setDescending(true);
                         query.setLimit(20);
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         // Set up a query for a view that indexes blog posts, to get the latest:
                         var query = database.GetView("postsByDate").CreateQuery();
                         query.Descending = true;
@@ -115,7 +115,7 @@
                             }
                         }
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         // Let's find the documents that have conflicts so we can resolve them:
                         var query = database.CreateAllDocumentsQuery();
                         query.AllDocsMode = AllDocsMode.OnlyConflicts;
@@ -177,7 +177,7 @@
                             Log.w("MYAPP", "Widget named %s costs $%f", row.getKey(), ((Double)row.getValue()).doubleValue());
                         }
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         // Let's query a view that maps product names to prices,
                         // starting with the "M"s and showing 100 widgets:
                         var query = database.GetView("widgetsByName").CreateQuery();
@@ -237,7 +237,7 @@
                             }
                         }
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         // Check whether the query result set has changed:
                         if (queryResult == null || queryResult.Stale) 
                         {
@@ -309,7 +309,7 @@
                             this.liveQuery.start();
                         }
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         private void InitializeQuery() 
                         {
                             // Set up my live query during view initialization:
@@ -351,7 +351,7 @@
 			query.setStartKey(new Integer(100));
 			query.setEndKey(new Integer(90));
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         // Set up a query for the highest-rated movies:
                         var query = database.GetView("postsByDate").CreateQuery();
                         query.Descending = true;
@@ -381,7 +381,7 @@
 			query.setStartKey("red");
 			query.setEndKey(Arrays.asList("red", new HashMap<String, Object>()));
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         // Assume the view's keys are like [color, model]. We want all the red ones.
                         var query = database.GetView("carsByColorAndModel").CreateQuery();
                         query.StartKey = new List<object> {"red"};
@@ -468,7 +468,7 @@
 			QueryRow aggregate = result.next();
 			Log.w("MYAPP", "Average order was $%f", ((Double)aggregate.getValue()).doubleValue());
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         // This view's keys are order dates, and values are prices.
                         // The reduce function computes an average of the input values.
                         var query = database.GetView("ordersByDateView").CreateQuery();
@@ -555,7 +555,7 @@
 			    albumTimes.add((String)row.getValue()); // value is album's running time
 			}
                     ]]></code-block>
-                    <code-block language="C#"><![CDATA[
+                    <code-block language="c#"><![CDATA[
                         var query = database.GetView("hierarchyView").CreateQuery();
                         query.GroupLevel = 3;
                         query.StartKey = new List<object> {"Mope-Rock", "Radiohead"};
