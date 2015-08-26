@@ -22,7 +22,7 @@
         </unordered-list>
         <paragraph>Access control and ensuring that only relevant documents are synced are achieved through use of <emphasis>channels</emphasis> and the <emphasis>sync function</emphasis>.</paragraph>
 
-    <topic id="channels">
+        <topic id="channels">
         <title>Channels</title>
         <body>
             <paragraph>Channels are logical groupings of documents. A channel might contain documents for a specific user, for a specific group of users (identified by their role, for example, the Software Engineering department), or about a specific topic (for example, photography).
@@ -82,71 +82,10 @@
                 </section>
             </body>
         </topic>
-        
-                <topic id="cbl-replications">
-                    <title>Couchbase Lite replications</title>
-                    <body>
-                        <note>Replication tasks (or more simply, replications) that perform synchronization are controlled through Couchbase Lite. We mention them here to complete the synchronization picture.</note>
-                        <paragraph>Three aspects of synchronization are controlled through configuration choices for a Couchbase Lite replication: <emphasis>timing</emphasis>, <emphasis>direction</emphasis>, and <emphasis>channels</emphasis>. Replication timing can be <emphasis>ad-hoc</emphasis> (one-shot, that is, at a specific time) or <emphasis>continuous</emphasis>. A replication task can perform <emphasis>pull replication</emphasis> (from the remote database to the local database) or <emphasis>push replication</emphasis> (from the local database to the remote database). A replication can have a <emphasis>filter</emphasis> that specifies which channels to replicate.</paragraph>
-                        <paragraph>It takes very little code to perform a synchronization. Here is all the code that you would typically need to enable full bi-directional, authenticated, realtime synchronization between Couchbase Lite and Sync Gateway:</paragraph>
-                        <code-set>
-                            <code-block language="swift"><![CDATA[
-                                let url = NSURL(string: "http://localhost:4984/my-app/")
-                                let push = database.createPushReplication(url)
-                                let pull = database.createPullReplication(url)
-                                push.continuous = true
-                                pull.continuous = true
-                                var auth: CBLAuthenticatorProtocol?
-                                auth = CBLAuthenticator.basicAuthenticatorWithName(username, password: password)
-                                push.authenticator = auth
-                                pull.authenticator = auth
-                                push.start();
-                                pull.start();
-                            ]]></code-block>
-                            <code-block language="objective-c"><![CDATA[
-                                NSURL *url = [[NSURL alloc] initWithString:@"http://localhost:4984/my-app/"];
-                                CBLReplication *push = [database createPushReplication:url];
-                                CBLReplication *pull = [database createPullReplication:url];
-                                push.continuous = pull.continuous = YES;
-                                id<CBLAuthenticator> *auth = [CBLAuthenticator basicAuthenticatorWithName:@"president" password:@"password!"];
-                                [push setAuthenticator:auth];
-                                [pull setAuthenticator:auth];
-                                [push start];
-                                [pull start];
-                            ]]></code-block>
-                            <code-block language="java"><![CDATA[
-                                URL url = new URL("http://localhost:4984/my-app/");
-                                Replication push = database.createPushReplication(url);
-                                Replication pull = database.createPullReplication(url);
-                                pull.setContinuous(true);
-                                push.setContinuous(true);
-                                Authenticator auth = AuthenticatorFactory.createBasicAuthenticator("president", "password!");
-                                push.setAuthenticator(auth);
-                                pull.setAuthenticator(auth);
-                                push.start();
-                                pull.start();
-                            ]]></code-block>
-                            <code-block language="c#"><![CDATA[
-                                Uri url = new Hri("http://localhost:4984/my-app/");
-                                Replication push = database.CreatePushReplication(url);
-                                Replication pull = database.CreatePullReplication(url);
-                                pull.Continuous = true;
-                                push.Continuous = true;
-                                Authenticator auth = AuthenticatorFactory.CreateBasicAuthenticator("president", "password!");
-                                push.Authenticator = auth;
-                                pull.Authenticator = auth;
-                                push.Start();
-                                pull.Start();
-                            ]]></code-block>
-                        </code-set>
-                        <paragraph>A number of additional replication options are available to handle complex scenarios, but this example covers the majority of use cases.</paragraph>
-                        <paragraph>For more information about replication, see <ref href="../../guides/couchbase-lite/native-api/replication.xml">Replication</ref>.</paragraph>
-                    </body>
-                </topic>
                 <topic id="summary">
                     <title>Next steps</title>
                     <body>
-                        <paragraph>To learn more about Sync Gateway, see the <ref href="../../guides/sync-gateway/set.xml">Sync Gateway Guide</ref> in our documentation. There are also sample applications which show these Sync Gateway concepts in both the <external-ref href="https://github.com/couchbaselabs/Grocery-Sync-iOS">GrocerySync iOS</external-ref> and <external-ref href="https://github.com/couchbaselabs/GrocerySync-Android">GrocerySync Android</external-ref> sample applications.</paragraph>
+                        <paragraph>To learn more about Sync Gateway, see the <ref href="../../guides/sync-gateway/set.xml">Sync Gateway Guide</ref> in our documentation. There are also sample applications which show these Sync Gateway concepts in both the <external-ref href="https://github.com/couchbaselabs/Grocery-Sync-iOS">GrocerySync iOS</external-ref> and <external-ref href="https://github.com/couchbaselabs/GrocerySync-Android">GrocerySync Android</external-ref> sample applications. For more information about Couchbase Lite replication, see <ref href="../../guides/couchbase-lite/native-api/replication.xml">Replication</ref>.</paragraph>
                     </body>
                 </topic>
     </introduction>
