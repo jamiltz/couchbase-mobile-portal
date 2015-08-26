@@ -3,20 +3,20 @@
        xsi:noNamespaceSchemaLocation="../../docs.xsd"
        id="sync-gateway-overview">
     <title>Sync Gateway Overview</title>
-    <description>Sync Gateway mobile-enables your Couchbase Server cluster and facilitates synchronizing Couchbase Lite databases with Couchbase Server databases.</description>
+    <description>Sync Gateway enables your Couchbase Server cluster for mobile devices and facilitates synchronizing Couchbase Lite databases with Couchbase Server databases.</description>
     <introduction>
         <paragraph>Sync Gateway mobile-enables your Couchbase Server cluster. It also facilitates synchronizing Couchbase Lite databases on users’ mobile devices with Couchbase Server databases.
         </paragraph>
-        <paragraph>Using Sync Gateway can address a major problem of synchronization—the disparity between the shear volume of data that users produce and are interested in, on the one hand and limited storage space on mobile devices and data-synchronization costs.
+        <paragraph>Using Sync Gateway can address a major problem of synchronization&#8212;the disparity between the volume of user data and limited storage space on mobile devices.
         </paragraph>
         <paragraph>The following diagram illustrates the place of Sync Gateway in a Couchbase
             Mobile deployment:
         </paragraph>
         <image href="images/sync-gateway.svg" alt="Sync Gateway"/>
-        <paragraph>You can scale out Sync Gateway just like you would any web application: by adding more nodes behind a load balancer, such as <code>nginx</code>.</paragraph>
+        <paragraph>You can scale out Sync Gateway just like you would any web application: by adding more nodes behind a load balancer.</paragraph>
         <paragraph>Sync Gateway:</paragraph>
         <unordered-list>
-            <list-item>Maintains up-to-date copies of documents where users need them, on mobile devices for instant access and on servers in data centers for a variety of reasons such as synchronizing documents across a user's mobile devices, sharing documents with other users, and loss-protection. Mobile apps create, update, and delete files locally. Sync Gateway takes care of the rest.</list-item>
+            <list-item>Maintains up-to-date copies of documents where users need them: on mobile devices for instant access and on servers in data centers for reasons such as synchronizing documents, sharing documents, and loss-protection. Mobile apps create, update, and delete files locally. Sync Gateway takes care of the rest.</list-item>
             <list-item>Provides access control, ensuring that users can only access documents to which they should have access.</list-item>
             <list-item>Ensures that only <emphasis>relevant</emphasis> documents are synced. Sync Gateway accomplishes this by examining documents and by applying business logic to decide whether to assign the documents to channels.</list-item>
         </unordered-list>
@@ -30,7 +30,7 @@
             <paragraph>Channels provide users <emphasis>read</emphasis> access to documents. There are three parts to this:
             </paragraph>
             <ordered-list>
-                <list-item><strong>Each user is authorized to access specific channels</strong>. This can be accomplished through the Sync Gateway Admin API and through the sync function’s examination of the contents of documents.
+                <list-item><strong>Each user is authorized to access specific channels</strong>. Both the Sync Gateway Admin API and the sync function can grant users access to channels.
                 </list-item>
                 <list-item><strong>The sync function examines each new, revised, and deleted document and assigns it to one or more channels</strong>. Evaluations and resulting assignments can consider access privileges, business logic, and the contents of documents. Document deletion is a kind of revision, so deleted documents can be assigned to channels.
                 </list-item>
