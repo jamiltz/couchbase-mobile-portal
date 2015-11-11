@@ -3,10 +3,10 @@
     xsi:noNamespaceSchemaLocation="../../docs.xsd"
     id="release-notes">
     <title>Release notes</title>
-    <description>Release notes for Sync Gateway.</description>
+    <description>Release notes for Sync Gateway</description>
     <introduction>
         <paragraph>
-            Release notes for Sync Gateway.
+            Release notes for Sync Gateway
         </paragraph>
     </introduction>
     <articles>
@@ -31,7 +31,7 @@
                         <strong>Friendlier default configuration.</strong> Now when you run Sync Gateway without providing any configuration options, the Guest user will be enabled and will have access to all documents. The tradeoff, for security reasons, is that Sync Gateway will default to listening on the local loopback interface only.
                     </list-item>
                     <list-item>
-                        <strong>Production certification for Couchbase 3.1</strong>, and non-production certification for using 4.0 (Beta  1). Sync Gateway users are encouraged to upgrade to 3.1 in order to take advantage of all the great improvements since the 2.5.2 release.
+                        <strong>Production certification for Couchbase 3.1</strong>, and non-production certification for using 4.0 (Beta 1). Sync Gateway users are encouraged to upgrade to 3.1 in order to take advantage of all the great improvements since the 2.5.2 release.
                     </list-item>
                 </ordered-list>
                 <section id="110-enhancements">
@@ -352,7 +352,6 @@
                     short passwords, performance issues around <code>_all_docs</code>, and added support to handle in-production changes of the
                     sync function without forcing downtime of the Sync Gateway node. These fixes and more are detailed in our highlights list below:
                 </paragraph>
-                <paragraph>
                 	<unordered-list>
 						<list-item>Fixed race condition: err "the pool is closed" during a rebalance</list-item>
 						<list-item>Added <code>SlowServerCallWarningThreshold</code> config variable that alerts when requests to Couchbase buckets take longer than expected</list-item>
@@ -364,7 +363,6 @@
 						<list-item><code>_all_docs</code> slow <external-ref href="https://github.com/couchbase/sync_gateway/issues/326">#326</external-ref></list-item>
 						<list-item>Admin API <code>/db/_resync</code> added that can perform a re-sync with an updated sync function <external-ref href="https://github.com/couchbase/sync_gateway/issues/116">#116</external-ref></list-item>
 					</unordered-list>
-                </paragraph>
             </introduction>
         </article>
         <article id="1.0.1">
@@ -376,13 +374,11 @@
                     Issues addressed center on improving the Sync Gateway's performance, bumping up the current limitation on the Attachment size, and
                     continued development of our experimental admin tooling centered on Sync Function development.
                 </paragraph>                
-                <paragraph>
                 	<unordered-list>
                     	<list-item>Fixed issues handling attachments over 10MB (the size limit is still 20MB) <external-ref href="https://github.com/couchbase/sync_gateway/issues/333">#333</external-ref></list-item>
 						<list-item>Fixed requireRole( ) function called in sync functions <external-ref href="https://github.com/couchbase/sync_gateway/issues/335">#335</external-ref></list-item>
 						<list-item>Updates to the experimental admin UI</list-item>
 					</unordered-list>
-                </paragraph>
             </introduction>
         </article>
         <article id="1.0.0">
