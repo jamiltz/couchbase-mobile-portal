@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../docs.xsd"
+    id="deploying-channel-caches">
+    <title>Deploying channel caches</title>
+    <description>Setting up a new Sync Gateway deployment that uses channel caches</description>
+    <introduction>
+        <paragraph></paragraph>
+    </introduction>
+    <topics>
+        <topic id="configuration">
+            <title>Configuration</title>
+            <body>
+                <paragraph></paragraph>
+            </body>
+        </topic>
+        <topic id="deployment-notes">
+            <title>Deployment notes</title>
+            <body>
+                <paragraph></paragraph>
+            </body>
+        </topic>
+    </topics>
+</article>

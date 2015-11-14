@@ -6,7 +6,7 @@
    <title>Configuration using command-line options</title>
    <description>An overview of Sync Gateway's command-line options</description>
    <related>
-      <item><ref href="../configuration/config-properties.xml">Configuration properties</ref></item>
+      <item><ref href="../configuration/config-properties.xml">Configuration using a configuration file</ref></item>
    </related>
    <introduction>     
       <paragraph>To configure Sync Gateway, you can specify command-line options when you start Sync Gateway. Command-line options can only specify a limited set of configuration properties, and cannot be used to configure multiple databases. For more comprehensive configuration, use a JSON configuration file. For information about using a configuration file, see <ref href="../configuration/config-properties.xml">Configuration properties</ref>.</paragraph>

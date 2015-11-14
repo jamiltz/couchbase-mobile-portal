@@ -7,7 +7,7 @@
    <description>An overview of Sync Gateway's configuration properties (for inclusion in a
       configuration file)</description>
    <related>
-      <item><ref href="../configuration/command-line-options.xml">Command-line options</ref></item>
+      <item><ref href="../configuration/command-line-options.xml">Configuration using command-line options</ref></item>
    </related>
    <introduction>
       <paragraph>You can use a configuration file to configure Sync Gateway. Configuration determines the runtime behavior of Sync Gateway, including server configuration and the database or set of databases with which a Sync Gateway instance can interact. All configuration properties have default values.</paragraph>
@@ -84,6 +84,13 @@
                    </entry>
                       <entry><code>string</code></entry>
                       <entry>URL of the Sync Gateway Admin Console HTML page. The default is the bundled Sync Gateway Admin Console at <code>localhost:4985/_admin/</code>.</entry>
+                   </row>
+                   <row>
+                      <entry>
+                         <code>channel_index</code>
+                      </entry>
+                      <entry>Array of configuration properties for distributed channel-index writers</entry>
+                      <entry>Distributed channel-index writer settings. See <ref href="#writer-cluster-config">Disributed channel-index writer configuration</ref>.</entry>
                    </row>
                    <row>
                       <entry>
@@ -267,6 +274,68 @@
           </body>
        </topic>
        
+       <topic id="writer-cluster-config">
+          <title>Distributed channel-index writer configuration</title>
+          <body>
+             <paragraph>Following are server configuration properties for the distributed channel-index writers:</paragraph>
+             <table>
+                <header>
+                   <row>
+                      <entry>Property</entry>
+                      <entry>Type</entry>
+                      <entry>Description and default</entry>
+                   </row>
+                </header>
+                <body>
+                   <row>
+                      <entry>
+                         <code>bucket</code>
+                      </entry>
+                      <entry><code>string</code></entry>
+                      <entry>Name of the bucket in which Sync Gateway instances that are channel-index writers store information about themselves, for use by the channel-indexing service. There is no default.</entry>
+                   </row> 
+                   <row>
+                      <entry>
+                         <code>dataDir</code>
+                      </entry>
+                      <entry><code>string</code></entry>
+                      <entry>Full path of a local directory in which the channel-indexing service can persist metadata. There is no default.</entry>
+                   </row>
+                   <row>
+                      <entry>
+                         <code>heartbeatInterval</code>
+                      </entry>
+                      <entry><code>integer</code></entry>
+                      <entry>The heartbeat interval in seconds. Heartbeats are used to detect Sync Gateway instances that are down or otherwise not available. The default is <code>???</code>.</entry>
+                   </row>
+                   <row>
+                      <entry>
+                         <code>password</code>
+                      </entry>
+                      <entry><code>string</code></entry>
+                      <entry>Bucket password for authenticating to Couchbase Server. There is no default.</entry>
+                   </row>
+                   <row>
+                      <entry>
+                         <code>server</code>
+                      </entry>
+                      <entry><code>string</code></entry>
+                      <entry>URL of the Couchbase server. There is no default.</entry>
+                   </row>
+                   <row>
+                      <entry>
+                         <code>username</code>
+                      </entry>
+                      <entry><code>string</code></entry>
+                      <entry>Bucket username for authenticating to Couchbase Server. There is no default.</entry>
+                   </row>
+                </body>
+             </table>
+             <paragraph>Also see <ref href="#channel-index-config">Channel-index bucket configuration</ref>.</paragraph>
+             <paragraph>For more information about distributed channel indexing, see <ref href="../../sync-gateway/channel-index/guide.xml">Channel indexing</ref>.</paragraph>
+          </body>
+       </topic>
+       
        <topic id="log-keys">
           <title>Log keys</title>
           <body>
@@ -351,6 +420,7 @@
              </table>
           </body>
           </topic>
+        
        <topic id="database-configuration">
           <title>Database configuration</title>
           <body>
@@ -401,6 +471,20 @@
                    </row>
                    <row>
                       <entry>
+                         <code>channel_index</code>
+                      </entry>
+                      <entry>Array of configuration properties for the channel-index for this database</entry>
+                      <entry>Bucket settings for the channel-index bucket. See <ref href="#channel-index-config">Channel-index bucket configuration</ref>.</entry>
+                   </row>
+                   <row>
+                      <entry>
+                         <code>dcpShard</code>
+                      </entry>
+                      <entry>integer</entry>
+                      <entry>Number of shards of the DCP feed. This configuration property applies solely if the distributed channel index is being used (The DCP-feed shards are distributed among channel-index writers. The number must be larger than the number of channel-index writers.</entry>
+                   </row>
+                   <row>
+                      <entry>
                          <code>eventHandlers</code>
                       </entry>
                       <entry><code>interface</code></entry>
@@ -411,7 +495,7 @@
                          <code>feedType</code>
                       </entry>
                       <entry><code>string</code></entry>
-                      <entry>Feed type: <code>DCP</code> or <code>TAP</code>. The default is <code>TAP</code>.</entry>
+                      <entry>Feed type: <code>DCP</code>, <code>TAP</code>, or <code>DCPSHARD</code>. Use the configuration property <code>DCPSHARD</code> to use distributed channel indexes for all of the Couchbase Server databases in a Couchbase cluster that Sync Gateway instances serve. The default is <code>TAP</code>.</entry>
                    </row>
                    <!-- I am omitting ImportDocs -->
                    <row>
@@ -465,7 +549,7 @@
                          <code>server</code>
                       </entry>
                       <entry><code>string</code></entry>
-                      <entry>Couchbase Server (or Walrus) URL. The default is <code>walrus:</code>.</entry>
+                      <entry>URL of the Couchbase Server (or Walrus). The default is <code>walrus:</code>.</entry>
                    </row>
                    <!-- I am omitting bucket shadowing at the moment. -->
                    <row>
@@ -494,6 +578,85 @@
              </table>
           </body>
        </topic>
+       
+       <topic id="channel-index-config">
+          <title>Channel-index bucket configuration</title>
+          <body>
+             <paragraph>Following are configuration properties for the bucket for the distributed channel index for a database:</paragraph>
+                   <table>
+                      <header>
+                         <row>
+                            <entry>Property</entry>
+                            <entry>Type</entry>
+                            <entry>Description and default</entry>
+                         </row>
+                      </header>
+                      <body>
+                         <row>
+                            <entry>
+                               <code>bucket</code>
+                            </entry>
+                            <entry><code>string</code></entry>
+                            <entry>Name of the bucket in which Sync Gateway instances store information about themselves, for use by the channel-indexing service. There is no default.</entry>
+                         </row> 
+                         <row>
+                            <entry>
+                               <code>server</code>
+                            </entry>
+                            <entry><code>string</code></entry>
+                            <entry>URL of the Couchbase Server. Their is no default.</entry>
+                         </row>
+                         <row>
+                            <entry>
+                               <code>writer</code>
+                            </entry>
+                            <entry><code>string</code></entry>
+                            <entry>Whether the Sync Gateway instance acts as a channel-index writer for this database. Including <code>writer</code> with the value <code>true</code> makes this Sync Gateway instance a channel-index writer for this database. Omitting <code>"writer":true</code> means that the Sync Gateway instance will only read the channel index.</entry>
+                         </row>
+                      </body>
+                   </table>
+             <paragraph>The following sample configuration file includes configuration properties for the channel-index writer cluster and the channel-index bucket:</paragraph>
+             <code-block>
+                {
+                    "interface":":4984",
+                    "adminInterface":":4985",
+                    "log":[
+                    "*"
+                    ],
+                    "verbose":"true",
+                    "cluster_config":{
+                        "server":"http://localhost:8091",
+                        "data_dir":"/tmp/sg",
+                        "bucket":"channel_index"
+                    },
+                    "databases":{
+                        "db":{
+                            "feed_type":"DCPSHARD",
+                            "num_shards":64
+                           "server":"http://localhost:8091",
+                           "revs_limit":300,
+                           "users":{
+                               "GUEST":{
+                                   "disabled":true,
+                                   "admin_channels":[
+                                       "*"
+                                   ]
+                                }
+                            },
+                            "bucket":"default",
+                             "channel_index":{
+                                 "server":"http://channel_index@localhost:8091",
+                                 "bucket":"channel_index",
+                                 "writer":true
+                             }
+                         }
+                     }
+                 }
+             </code-block>
+             <paragraph>For more information about distributed channel indexing, see <ref href="../../sync-gateway/channel-index/guide.xml">Channel indexing</ref>.</paragraph>
+                </body>
+       </topic>
+       
        <topic id="auth-configuration">
           <title>Authentication configuration</title>
           <body>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../docs.xsd"
+    id="channel-indexing-comparison">
+            <title>Comparing approaches</title>
+            <description>Comparison of channel-indexing approaches</description>
+            <introduction>
+                <paragraph>The following table compares the two channel-indexing approaches:</paragraph>
+                <table>
+                    <header>
+                        <row>
+                            <entry>Aspect</entry>
+                            <entry>Channel caches</entry>
+                            <entry>Channel index</entry>
+                        </row>
+                    </header>
+                    <body>
+                        <row>
+                            <entry>Scalability of both the Couchbase Server data service and of Sync Gateway instances</entry>
+                            <entry><strong>Limited</strong>. Scalability is limited by Sync Gateway instances writing to the channel caches. When Sync Gateway instances can no longer keep up with the write load, latency increases. Adding more Sync Gateway instances does not remove the limitation.</entry>
+                            <entry><strong>Yes</strong>. Architectural changes to support the distributed channel index permit scaling of the Couchbase Server data service and scaling of Sync Gateway nodes</entry>
+                        </row>
+                        <row>
+                            <entry>Performance tuning options</entry>
+                            <entry><strong>Limited</strong>. Regarding Sync Gateway and the channel caches, the sole performance tuning option is to increase the CPU and memory resources on the Sync Gateway nodes (vertical scaling).</entry>
+                            <entry><strong>Considerable</strong>. There are more possibilities for tuning performance, for example by separating channel-index writing from channel-index reading.</entry>
+                        </row>
+                        <row>
+                            <entry>Channel index is complete for all document revisions</entry>
+                            <entry><strong>No</strong>. Channel caches are caches of channel assignments for recent document modifications.</entry>
+                            <entry><strong>Yes</strong>. The channel index is complete.</entry>
+                        </row>
+                        <row>
+                            <entry>Division of responsibility for channel-index writing</entry>
+                            <entry><strong>No</strong>. All Sync Gateway instances receive the entire DCP mutation feed and update their local channel caches regarding the channel assignments of all document revisions.</entry>
+                            <entry><strong>Yes</strong>. The DCP mutation feed is sharded, and the shards are distributed across channel-index writers. This divides up the channel-index writing workload.</entry>
+                        </row>
+                        <row>
+                            <entry>Automatic redistribution of channel-index writing responsibilities</entry>
+                            <entry><emphasis>Not applicable</emphasis></entry>
+                            <entry><strong>Yes</strong>. If a channel-index writer goes offline, then the remaining channel-index writers detect this and automatically redistribute the shards of the DCP mutation feed among themselves.</entry>
+                        </row>
+                        <row>
+                            <entry>Use Walrus</entry>
+                            <entry><strong>Yes</strong></entry>
+                            <entry><strong>No</strong></entry>
+                        </row>
+                    </body>
+                </table>
+            </introduction>
+</article>

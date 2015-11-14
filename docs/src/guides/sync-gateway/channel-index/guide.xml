@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<guide xmlns:xi="http://www.w3.org/2001/XInclude"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="../../../docs.xsd"
+       id="channel-indexing">
+   <title>Channel indexing</title>
+   <description>Learn options for channel indexing.</description>
+   <related>
+      <item><ref href="../configuration/config-properties.xml">Configuration</ref></item>
+   </related>
+   <introduction>
+      <paragraph>This guide describes a choice that you face between two kinds of <emphasis>channel indexing</emphasis>. To efficiently fulfill read requests for documents, Sync Gateway performs channel indexing, identifying the document revisions that are assigned to each channel.</paragraph>
+   </introduction>
+   <articles>
+      <xi:include href="intro.xml"/>
+      <xi:include href="comparison.xml"/>
+      <xi:include href="deploying-channel-caches.xml"/>
+      <xi:include href="deploying-channel-indexing.xml"/>
+      <xi:include href="migration.xml"/>
+   </articles>
+</guide>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../docs.xsd"
+    id="migration">
+    <title>Migrating to channel indexing</title>
+    <description>Migrating an existing Sync Gateway deployment to use distributed channel indexing</description>
+    <introduction>
+        <note>These instructions are for migrating an <emphasis>existing</emphasis> Sync Gateway deployment to use distributed channel indexing. For instructions about creating a new Sync Gateway deployment that will use distributed channel indexing, see <ref href="deploying-channel-indexing.xml">Migration</ref>.</note>
+        <paragraph></paragraph>
+    </introduction>
+    <topics>
+        <topic id="configurations">
+            <title>Possible configurations</title>
+            <body>
+                <paragraph></paragraph>
+            </body>
+        </topic>
+        <topic id="configurations">
+            <title>Possible configurations</title>
+            <body>
+                <paragraph></paragraph>
+            </body>
+        </topic>
+        <topic id="deployment-notes">
+            <title>Deployment notes</title>
+            <body>
+                <paragraph></paragraph>
+            </body>
+        </topic>
+    </topics>
+</article>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../docs.xsd"
+    id="channel-indexing-intro">
+            <title>Channel indexing</title>
+            <description>Introduction to channel indexing</description>
+            <introduction>
+                <paragraph>To efficiently fulfill read requests for documents, Sync Gateway performs channel indexing, identifying the document revisions that are assigned to each channel.</paragraph>
+                <paragraph>Sync Gateway 1.2 supports two approaches to channel indexing: using local channel caches and using a distributed channel index. Details about these approaches are below.</paragraph>
+                <note type="caution">Mixed channel-indexing approaches are not possible. All Sync Gateway instances in a Couchbase Mobile deployment must be migrated to using the distributed channel-indexing service at the same time, for all databases. <strong>After you migrate a deployment, you cannot migrate back.</strong> Migration must be done in a specific manner that requires simultaneous downtime of all Sync Gateway instances.</note>
+            </introduction>
+            <topics>
+                <topic id="about-channels">
+                    <title>About channels</title>
+                    <body>
+                        <paragraph>In Sync Gateway, channels play a central role in controlling read access to document revisions:</paragraph>
+                        <unordered-list>
+                            <list-item>Every document is associated with a set of channels. From the document's perspectives, the channels can be thought of as tags that identify the type, purpose, accessibility, and so forth, of the document revision. The app-defined sync function is responsible for assigning every document revision a set of channels as the document revision is saved to the database.</list-item>
+                            <list-item>Every user and role has a set of channels that they're allowed to read. A user can only read documents that are in at least one of the user's channels (or the channels of roles that user has.) User/role channel access can be assigned directly through the admin API, or via the sync function when a document is updated.</list-item>
+                        </unordered-list>
+                        <paragraph>For more information about channels, see <ref href="../3-channel-development.xml">Data routing with channels</ref>.</paragraph>
+                    </body>
+                </topic>
+                <topic id="two-approaches">
+                    <title>Two approaches for channel indexing</title>
+                    <body>
+                        <paragraph>Beginning with Couchbase Mobile 1.2, all Sync Gateway instances in a Couchbase Mobile deployment can take one of two approaches to channel indexing (for all databases in the deployment):</paragraph>
+                        <unordered-list>
+                            <list-item><strong>Local channel caches</strong> (Sole approach in Sync Gateway 1.1): Each Sync Gateway instance writes a local, in-memory cache of the channel assignments of documents that have been modified recently. Channel caches do not contain complete channel indexes. When necessary, Sync Gateway instances can obtain channel-assignment information that is not in the local cache. Each Sync Gateway instance writes channel-assignment information to its local cache for all document modifications.</list-item>
+                            <list-item><strong>Distributed channel index</strong> (New in Sync Gateway 1.2): All Sync Gateway instances read from the same channel index, which is stored in a Couchbase Server bucket. Sync Gateway instances that are identified as channel-index writers write to the channel index. The channel index is a complete index of the channel assignments of all document revisions.</list-item>
+                        </unordered-list>
+                    </body>
+                </topic>
+                <topic id="channel-caches">
+                    <title>Using local channel caches</title>
+                    <body>
+                        <paragraph>This drawing illustrates use of local channel caches. Numbers identify key points that are explained below the drawing.</paragraph>
+                        <image href="images/channel-caches.svg" alt="Local channel caches"/>
+                        <paragraph>In the drawing:</paragraph>
+                        <ordered-list>
+                            <list-item>Sync Gateway instances communicate with data-service nodes in a Couchbase cluster. Application data flows between each Sync Gateway instance and the application-data bucket.</list-item>
+                            <list-item>Each Sync Gateway instance writes to and reads from a channel cache in memory. The channel cache contains information about recent document updates, but not about the channel assignments of all documents.</list-item>
+                            <list-item>Every Sync Gateway instance receives the entire DCP mutation feed, monitors the feed for document modifications, and maintains a channel cache for the entire database. There is no division of work.</list-item>
+                        </ordered-list>
+                    </body>
+                </topic>
+                <topic id="channel-index">
+                    <title>Using a distributed channel index</title>
+                    <body>
+                        <paragraph>This drawing illustrates use of a channel index. Numbers identify key points that are explained below the drawing.</paragraph>
+                        <image href="images/channel-index.svg" alt="Distributed channel index"/>
+                        <ordered-list>
+                            <list-item>Sync Gateway instances communicate with data-service nodes in a Couchbase cluster. Application data flows between each Sync Gateway instance and the application-data bucket.</list-item>
+                            <list-item>A channel-indexing service in Sync Gateway writes to and reads from a channel index that is stored in a bucket in Couchbase Server. The channel-index bucket contains an index of channel assignments for all document revisions in the database.</list-item>
+                            <list-item>Every Sync Gateway instance that is a channel-index writer receives a shard of the DCP mutation feed, monitors the shard for document modifications, and updates the channel index for document modifications. There is a division of work across channel-index writers because the DCP mutation feed is sharded.</list-item>
+                        </ordered-list>
+                    </body>
+                </topic>
+            </topics>
+</article>
