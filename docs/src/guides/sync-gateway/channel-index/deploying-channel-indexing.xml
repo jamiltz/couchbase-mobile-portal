@@ -3,30 +3,48 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../../docs.xsd"
     id="deploying-channel-indexing">
-            <title>Deploying channel indexing</title>
-            <description>Setting up a new Sync Gateway deployment that uses distributed channel indexing</description>
+            <title>Deploying a new Sync Gateway cluster that uses distributed channel indexing</title>
+            <description>Deploying a new Sync Gateway cluster that uses distributed channel indexing</description>
             <introduction>
-                <note>These instructions are for setting up a <emphasis>new</emphasis> Sync Gateway deployment that will use distributed channel indexing. For instructions about migrating in an existing Sync Gateway deployment from using channel caches to using distributed channel indexing, see <ref href="migration.xml">Migration</ref>.</note>
+                <note>These instructions are for deploying a <emphasis>new</emphasis> Sync Gateway cluster that will use distributed channel indexing. For instructions about migrating an existing Sync Gateway deployment from using channel caches to using distributed channel indexing, see <ref href="migration.xml">Migration</ref>.</note>
                 <paragraph></paragraph>
             </introduction>
-            <topics>
-                <topic id="configurations">
-                    <title>Possible configurations</title>
-                    <body>
-                        <paragraph></paragraph>
-                    </body>
-                </topic>
-                <topic id="configurations">
-                    <title>Possible configurations</title>
-                    <body>
-                        <paragraph></paragraph>
-                    </body>
-                </topic>
-                <topic id="deployment-notes">
-                    <title>Deployment notes</title>
-                    <body>
-                        <paragraph></paragraph>
-                    </body>
-                </topic>
-            </topics>
+    <topics>
+        <topic id="ci-configurations">
+            <title>Possible configurations</title>
+            <body>
+                <paragraph></paragraph>
+            </body>
+    </topic>
+    <topic id="ci-deployment-summary">
+        <title>Summary of deployment tasks</title>
+        <body>
+            <paragraph></paragraph>
+        </body>
+    </topic>
+    <topic id="ci-service-config-bucket">
+            <title>Creating the bucket for channel-indexing service configuration data</title>
+            <body>
+                <paragraph></paragraph>
+            </body>
+    </topic>
+        <topic id="ci-buckets">
+            <title>Creating channel-index buckets</title>
+            <body>
+                <paragraph></paragraph>
+            </body>
+        </topic>
+        <topic id="ci-directory">
+            <title>Creating the directory for channel-indexing service state data</title>
+            <body>
+                <paragraph></paragraph>
+            </body>
+        </topic>
+    <topic id="ci-deployment">
+             <title>Deploying Sync Gateway instances</title>
+             <body>
+                <paragraph></paragraph>
+             </body>
+    </topic>
+  </topics>
 </article>

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 487.6 274.6" enable-background="new 0 0 487.6 274.6" xml:space="preserve">
+	 viewBox="0 0 487.6 353.8" enable-background="new 0 0 487.6 353.8" xml:space="preserve">
 <g>
-	<path fill="#FFFFFF" d="M472.3,214.6c0,1.1-0.9,2-2,2h-93c-1.1,0-2-0.9-2-2v-180c0-1.1,0.9-2,2-2h93c1.1,0,2,0.9,2,2V214.6z"/>
-	<path fill="none" stroke="#333333" stroke-width="3" stroke-miterlimit="10" d="M471.8,215.1c0,1.1-0.9,2-2,2h-93c-1.1,0-2-0.9-2-2
-		v-180c0-1.1,0.9-2,2-2h93c1.1,0,2,0.9,2,2V215.1z"/>
+	<path fill="#FFFFFF" d="M472.3,287.6c0,1.1-0.9,2-2,2h-93c-1.1,0-2-0.9-2-2v-253c0-1.1,0.9-2,2-2h93c1.1,0,2,0.9,2,2V287.6z"/>
+	<path fill="none" stroke="#333333" stroke-width="3" stroke-miterlimit="10" d="M471.8,288.1c0,1.1-0.9,2-2,2h-93c-1.1,0-2-0.9-2-2
+		v-253c0-1.1,0.9-2,2-2h93c1.1,0,2,0.9,2,2V288.1z"/>
 </g>
 <g>
-	<path fill="#FFFFFF" d="M360.3,214.6c0,1.1-0.9,2-2,2h-93c-1.1,0-2-0.9-2-2v-180c0-1.1,0.9-2,2-2h93c1.1,0,2,0.9,2,2V214.6z"/>
-	<path fill="none" stroke="#333333" stroke-width="3" stroke-miterlimit="10" d="M360.8,215.1c0,1.1-0.9,2-2,2h-93c-1.1,0-2-0.9-2-2
-		v-180c0-1.1,0.9-2,2-2h93c1.1,0,2,0.9,2,2V215.1z"/>
+	<path fill="#FFFFFF" d="M360.3,287.6c0,1.1-0.9,2-2,2h-93c-1.1,0-2-0.9-2-2v-253c0-1.1,0.9-2,2-2h93c1.1,0,2,0.9,2,2V287.6z"/>
+	<path fill="none" stroke="#333333" stroke-width="3" stroke-miterlimit="10" d="M360.8,288.1c0,1.1-0.9,2-2,2h-93c-1.1,0-2-0.9-2-2
+		v-253c0-1.1,0.9-2,2-2h93c1.1,0,2,0.9,2,2V288.1z"/>
 </g>
 <g>
 	<path fill="#C6DD9F" d="M210.3,185.6c0,1.1-0.9,2-2,2H7.3c-1.1,0-2-0.9-2-2V6.6c0-1.1,0.9-2,2-2h201c1.1,0,2,0.9,2,2V185.6z"/>
 	<path fill="none" stroke="#333333" stroke-width="3" stroke-miterlimit="10" d="M210.8,186.1c0,1.1-0.9,2-2,2H7.8c-1.1,0-2-0.9-2-2
 		V7.1c0-1.1,0.9-2,2-2h201c1.1,0,2,0.9,2,2V186.1z"/>
 </g>
-<text transform="matrix(1 0 0 1 273.0601 245.2586)"><tspan x="0" y="0" fill="#333333" font-family="'KievitOT-Bold'" font-size="20px">Data service nodes in</tspan><tspan x="0" y="24" fill="#333333" font-family="'KievitOT-Bold'" font-size="20px">a Couchbase cluster</tspan></text>
+<text transform="matrix(1 0 0 1 273.0601 318.2586)"><tspan x="0" y="0" fill="#333333" font-family="'KievitOT-Bold'" font-size="20px">Data service nodes in</tspan><tspan x="0" y="24" fill="#333333" font-family="'KievitOT-Bold'" font-size="20px">a Couchbase cluster</tspan></text>
 <text transform="matrix(1 0 0 1 270.4198 17.8138)" fill="#333333" font-family="'KievitOT-Bold'" font-size="18px">Application-data bucket</text>
 <g opacity="0.7">
 	<path fill="#CCCCCC" d="M484.3,124.6c0,1.1-0.9,2-2,2h-230c-1.1,0-2-0.9-2-2v-77c0-1.1,0.9-2,2-2h230c1.1,0,2,0.9,2,2V124.6z"/>
@@ -135,26 +135,23 @@
 </g>
 <g>
 	<g>
-		<circle fill="#FF8900" cx="368.3" cy="88.9" r="18.8"/>
+		<circle fill="#FF8900" cx="237.9" cy="116" r="18.8"/>
 	</g>
-	<text transform="matrix(1 0 0 1 360.9716 94.1021)" fill="#FFFFFF" font-family="'KievitOT-Bold'" font-size="36px">3</text>
+	<text transform="matrix(1 0 0 1 230.6051 121.2261)" fill="#FFFFFF" font-family="'KievitOT-Bold'" font-size="36px">3</text>
 </g>
 <g>
-	<g>
-		<path fill="#FFC425" d="M199.3,173.6c0,1.1-0.9,2-2,2h-98c-1.1,0-2-0.9-2-2v-84c0-1.1,0.9-2,2-2h98c1.1,0,2,0.9,2,2V173.6z"/>
-		<path fill="none" stroke="#333333" stroke-width="2" stroke-miterlimit="10" d="M199.3,173.6c0,1.1-0.9,2-2,2h-98
-			c-1.1,0-2-0.9-2-2v-84c0-1.1,0.9-2,2-2h98c1.1,0,2,0.9,2,2V173.6z"/>
-	</g>
-	<text transform="matrix(1 0 0 1 108.9071 113.8452)"><tspan x="0" y="0" fill="#333333" font-family="'KievitOT-Bold'" font-size="20px">Channel- </tspan><tspan x="0" y="24" fill="#333333" font-family="'KievitOT-Bold'" font-size="20px">Indexing</tspan><tspan x="0" y="48" fill="#333333" font-family="'KievitOT-Bold'" font-size="20px">Service</tspan></text>
+	<path fill="#FFC425" d="M199.3,173.6c0,1.1-0.9,2-2,2h-98c-1.1,0-2-0.9-2-2v-84c0-1.1,0.9-2,2-2h98c1.1,0,2,0.9,2,2V173.6z"/>
+	<path fill="none" stroke="#333333" stroke-width="2" stroke-miterlimit="10" d="M199.3,173.6c0,1.1-0.9,2-2,2h-98c-1.1,0-2-0.9-2-2
+		v-84c0-1.1,0.9-2,2-2h98c1.1,0,2,0.9,2,2V173.6z"/>
 </g>
 <g opacity="0.7">
-	<path fill="#99E3E5" d="M484.3,200.6c0,1.1-0.9,2-2,2h-230c-1.1,0-2-0.9-2-2v-49c0-1.1,0.9-2,2-2h230c1.1,0,2,0.9,2,2V200.6z"/>
+	<path fill="#FFC425" d="M484.3,200.6c0,1.1-0.9,2-2,2h-230c-1.1,0-2-0.9-2-2v-49c0-1.1,0.9-2,2-2h230c1.1,0,2,0.9,2,2V200.6z"/>
 </g>
 <g>
-	<path fill="#FFC425" stroke="#333333" stroke-width="2" stroke-miterlimit="10" d="M342.3,166c0-3.6-13.7-6.5-30.5-6.5
+	<path fill="#EBAAAB" stroke="#333333" stroke-width="2" stroke-miterlimit="10" d="M342.3,166c0-3.6-13.7-6.5-30.5-6.5
 		c-16.8,0-30.5,2.9-30.5,6.5v19.5c0,3.6,13.7,6.5,30.5,6.5c16.8,0,30.5-2.9,30.5-6.5V166z"/>
 	<g>
-		<ellipse fill="#FFC425" cx="311.9" cy="166" rx="30" ry="6.5"/>
+		<ellipse fill="#EBAAAB" cx="311.9" cy="166" rx="30" ry="6.5"/>
 		<path fill="#333333" d="M343,166.1c0,0,0,0.1-0.1,0.4c-0.1,0.5-0.4,1-0.8,1.4c-0.8,0.9-2.2,1.6-3.9,2.2c-3.4,1.2-8.4,1.9-14.4,2.3
 			c-3,0.2-6.2,0.3-9.6,0.3c-3.4,0-7,0-10.8-0.2c-3.7-0.1-7.6-0.4-11.5-1c-2-0.3-3.9-0.7-5.9-1.3c-1-0.3-2-0.7-2.9-1.2
 			c-0.5-0.3-1-0.6-1.4-1.1c-0.2-0.2-0.4-0.5-0.6-0.8c-0.1-0.2-0.1-0.4-0.2-0.5c0-0.1,0-0.2-0.1-0.3l0-0.2l0-0.1c0-0.1,0,0.1,0-0.2
@@ -169,10 +166,10 @@
 	</g>
 </g>
 <g>
-	<path fill="#FFC425" stroke="#333333" stroke-width="2" stroke-miterlimit="10" d="M453.3,166c0-3.6-13.7-6.5-30.5-6.5
+	<path fill="#EBAAAB" stroke="#333333" stroke-width="2" stroke-miterlimit="10" d="M453.3,166c0-3.6-13.7-6.5-30.5-6.5
 		c-16.8,0-30.5,2.9-30.5,6.5v19.5c0,3.6,13.7,6.5,30.5,6.5c16.8,0,30.5-2.9,30.5-6.5V166z"/>
 	<g>
-		<ellipse fill="#FFC425" cx="423.4" cy="166" rx="30" ry="6.5"/>
+		<ellipse fill="#EBAAAB" cx="423.4" cy="166" rx="30" ry="6.5"/>
 		<path fill="#333333" d="M454.5,166.1c0,0,0,0.1-0.1,0.4c-0.1,0.5-0.4,1-0.8,1.4c-0.8,0.9-2.2,1.6-3.9,2.2
 			c-3.4,1.2-8.4,1.9-14.4,2.3c-3,0.2-6.2,0.3-9.6,0.3c-3.4,0-7,0-10.8-0.2c-3.7-0.1-7.6-0.4-11.5-1c-2-0.3-3.9-0.7-5.9-1.3
 			c-1-0.3-2-0.7-2.9-1.2c-0.5-0.3-1-0.6-1.4-1.1c-0.2-0.2-0.4-0.5-0.6-0.8c-0.1-0.2-0.1-0.4-0.2-0.5c0-0.1,0-0.2-0.1-0.3l0-0.2
@@ -189,9 +186,9 @@
 <text transform="matrix(1 0 0 1 115.0521 232.7595)"><tspan x="0" y="0" fill="#333333" font-family="'KievitOT-Bold'" font-size="18px">Channel-index</tspan><tspan x="0" y="21.6" fill="#333333" font-family="'KievitOT-Bold'" font-size="18px">bucket</tspan></text>
 <g>
 	<g>
-		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="252.3" y1="189.2" x2="251.1" y2="190"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="254.4" y1="187.7" x2="253.2" y2="188.5"/>
 		
-			<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="2.8869,2.8869" x1="248.7" y1="191.7" x2="216.9" y2="214.2"/>
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="3.0615,3.0615" x1="250.7" y1="190.3" x2="216.9" y2="214.1"/>
 		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="215.7" y1="215" x2="214.5" y2="215.9"/>
 	</g>
 </g>
@@ -203,4 +200,93 @@
 		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="463.7" y1="58.8" x2="464.3" y2="60.1"/>
 	</g>
 </g>
+<g opacity="0.7">
+	<path fill="#FFC425" d="M484.3,270.6c0,1.1-0.9,2-2,2h-230c-1.1,0-2-0.9-2-2v-49c0-1.1,0.9-2,2-2h230c1.1,0,2,0.9,2,2V270.6z"/>
+</g>
+<g>
+	<path fill="#99DEF3" stroke="#333333" stroke-width="2" stroke-miterlimit="10" d="M342.3,236c0-3.6-13.7-6.5-30.5-6.5
+		c-16.8,0-30.5,2.9-30.5,6.5v19.5c0,3.6,13.7,6.5,30.5,6.5c16.8,0,30.5-2.9,30.5-6.5V236z"/>
+	<g>
+		<ellipse fill="#99DEF3" cx="311.9" cy="236" rx="30" ry="6.5"/>
+		<path fill="#333333" d="M343,236.1c0,0,0,0.1-0.1,0.4c-0.1,0.5-0.4,1-0.8,1.4c-0.8,0.9-2.2,1.6-3.9,2.2c-3.4,1.2-8.4,1.9-14.4,2.3
+			c-3,0.2-6.2,0.3-9.6,0.3c-3.4,0-7,0-10.8-0.2c-3.7-0.1-7.6-0.4-11.5-1c-2-0.3-3.9-0.7-5.9-1.3c-1-0.3-2-0.7-2.9-1.2
+			c-0.5-0.3-1-0.6-1.4-1.1c-0.2-0.2-0.4-0.5-0.6-0.8c-0.1-0.2-0.1-0.4-0.2-0.5c0-0.1,0-0.2-0.1-0.3l0-0.2l0-0.1c0-0.1,0,0.1,0-0.2
+			c0-0.1,0-0.2,0.1-0.4c0.1-0.2,0.1-0.5,0.2-0.6c0.2-0.3,0.4-0.6,0.6-0.8c0.4-0.5,0.9-0.8,1.4-1.1c1-0.6,1.9-1,2.9-1.3
+			c1.9-0.7,3.9-1.1,5.9-1.5c3.9-0.8,7.8-1.2,11.5-1.4c3.7-0.2,7.4-0.4,10.8-0.3c3.4,0.1,6.7,0.3,9.7,0.6c6,0.6,11,1.6,14.4,2.8
+			c1.7,0.6,3,1.4,3.9,2.3c0.4,0.4,0.7,1,0.8,1.3c0.1,0.4,0.1,0.6,0.1,0.6L343,236.1z M341,236c0,0,0.1-0.1-0.3-0.6
+			c-0.4-0.5-1.5-1.2-3.1-1.7c-3.1-1.1-8-2.1-13.8-2.6c-2.9-0.3-6.1-0.4-9.5-0.5c-3.4,0-7,0-10.6,0.2c-3.7,0.2-7.5,0.6-11.3,1.3
+			c-1.9,0.4-3.8,0.8-5.6,1.4c-0.9,0.3-1.8,0.7-2.5,1.1c-0.4,0.2-0.7,0.5-1,0.7c-0.1,0.1-0.2,0.3-0.3,0.4c0,0.1,0,0,0,0
+			c0,0.1,0,0.2,0,0.3c0-0.2,0-0.1,0-0.1l0,0l0,0c0,0,0,0,0,0.1c0,0,0,0.1,0.1,0.1c0.1,0.1,0.1,0.2,0.3,0.4c0.2,0.3,0.6,0.5,1,0.8
+			c0.8,0.5,1.6,0.8,2.5,1.2c1.8,0.7,3.7,1.2,5.6,1.6c3.8,0.9,7.6,1.4,11.3,1.7c7.4,0.6,14.4,0.4,20.3-0.4c5.9-0.7,10.7-1.9,13.8-3.1
+			c1.5-0.6,2.6-1.3,3.1-1.8c0.2-0.3,0.2-0.4,0.3-0.4c0-0.2,0-0.3,0-0.3L341,236z"/>
+	</g>
+</g>
+<g>
+	<path fill="#99DEF3" stroke="#333333" stroke-width="2" stroke-miterlimit="10" d="M453.3,236c0-3.6-13.7-6.5-30.5-6.5
+		c-16.8,0-30.5,2.9-30.5,6.5v19.5c0,3.6,13.7,6.5,30.5,6.5c16.8,0,30.5-2.9,30.5-6.5V236z"/>
+	<g>
+		<ellipse fill="#99DEF3" cx="423.4" cy="236" rx="30" ry="6.5"/>
+		<path fill="#333333" d="M454.5,236.1c0,0,0,0.1-0.1,0.4c-0.1,0.5-0.4,1-0.8,1.4c-0.8,0.9-2.2,1.6-3.9,2.2
+			c-3.4,1.2-8.4,1.9-14.4,2.3c-3,0.2-6.2,0.3-9.6,0.3c-3.4,0-7,0-10.8-0.2c-3.7-0.1-7.6-0.4-11.5-1c-2-0.3-3.9-0.7-5.9-1.3
+			c-1-0.3-2-0.7-2.9-1.2c-0.5-0.3-1-0.6-1.4-1.1c-0.2-0.2-0.4-0.5-0.6-0.8c-0.1-0.2-0.1-0.4-0.2-0.5c0-0.1,0-0.2-0.1-0.3l0-0.2
+			l0-0.1c0-0.1,0,0.1,0-0.2c0-0.1,0-0.2,0.1-0.4c0.1-0.2,0.1-0.5,0.2-0.6c0.2-0.3,0.4-0.6,0.6-0.8c0.4-0.5,0.9-0.8,1.4-1.1
+			c1-0.6,1.9-1,2.9-1.3c1.9-0.7,3.9-1.1,5.9-1.5c3.9-0.8,7.8-1.2,11.5-1.4c3.7-0.2,7.4-0.4,10.8-0.3c3.4,0.1,6.7,0.3,9.7,0.6
+			c6,0.6,11,1.6,14.4,2.8c1.7,0.6,3,1.4,3.9,2.3c0.4,0.4,0.7,1,0.8,1.3c0.1,0.4,0.1,0.6,0.1,0.6L454.5,236.1z M452.5,236
+			c0,0,0.1-0.1-0.3-0.6c-0.4-0.5-1.5-1.2-3.1-1.7c-3.1-1.1-8-2.1-13.8-2.6c-2.9-0.3-6.1-0.4-9.5-0.5c-3.4,0-7,0-10.6,0.2
+			c-3.7,0.2-7.5,0.6-11.3,1.3c-1.9,0.4-3.8,0.8-5.6,1.4c-0.9,0.3-1.8,0.7-2.5,1.1c-0.4,0.2-0.7,0.5-1,0.7c-0.1,0.1-0.2,0.3-0.3,0.4
+			c0,0.1,0,0,0,0c0,0.1,0,0.2,0,0.3c0-0.2,0-0.1,0-0.1l0,0l0,0c0,0,0,0,0,0.1c0,0,0,0.1,0.1,0.1c0.1,0.1,0.1,0.2,0.3,0.4
+			c0.2,0.3,0.6,0.5,1,0.8c0.8,0.5,1.6,0.8,2.5,1.2c1.8,0.7,3.7,1.2,5.6,1.6c3.8,0.9,7.6,1.4,11.3,1.7c7.4,0.6,14.4,0.4,20.3-0.4
+			c5.9-0.7,10.7-1.9,13.8-3.1c1.5-0.6,2.6-1.3,3.1-1.8c0.2-0.3,0.2-0.4,0.3-0.4c0-0.2,0-0.3,0-0.3L452.5,236z"/>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 11.0521 307.1462)"><tspan x="0" y="0" fill="#333333" font-family="'KievitOT-Bold'" font-size="18px">Bucket for channel-indexing</tspan><tspan x="0" y="21.6" fill="#333333" font-family="'KievitOT-Bold'" font-size="18px">service configuration data</tspan></text>
+<g>
+	<g>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="254.4" y1="262" x2="253.2" y2="262.9"/>
+		
+			<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="3.0615,3.0615" x1="250.7" y1="264.7" x2="216.9" y2="288.5"/>
+		<line fill="none" stroke="#000000" stroke-width="2" stroke-miterlimit="10" x1="215.7" y1="289.4" x2="214.5" y2="290.3"/>
+	</g>
+</g>
+<rect x="14.7" y="206.1" fill="#FFC425" stroke="#333333" stroke-width="2" stroke-miterlimit="10" width="74.4" height="44.6"/>
+<text transform="matrix(1 0 0 1 21.8427 233.6697)" fill="#333333" font-family="'KievitOT-Bold'" font-size="18px">dataDir</text>
+<g>
+	<g>
+		<line fill="none" stroke="#333333" stroke-width="2" stroke-miterlimit="10" x1="98.1" y1="200.8" x2="131.4" y2="175.5"/>
+		<g>
+			<polygon fill="#333333" points="89.1,207.6 105.7,203.2 98.8,200.3 97.9,192.8 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<line fill="none" stroke="#333333" stroke-width="2" stroke-miterlimit="10" x1="240.5" y1="218.8" x2="165.4" y2="175.5"/>
+		<g>
+			<polygon fill="#333333" points="250.3,224.5 239.8,210.9 239.8,218.4 233.3,222.1 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<circle fill="#FF8900" cx="368.3" cy="246.1" r="18.8"/>
+	</g>
+	<text transform="matrix(1 0 0 1 355.9716 251.2975)" fill="#FFFFFF" font-family="'KievitOT-Bold'" font-size="36px">4</text>
+</g>
+<g>
+	<g>
+		<circle fill="#FF8900" cx="88.2" cy="254.9" r="18.8"/>
+	</g>
+	<text transform="matrix(1 0 0 1 79.8668 261.0468)" fill="#FFFFFF" font-family="'KievitOT-Bold'" font-size="36px">5</text>
+</g>
+<g>
+	<line fill="#71AB0F" x1="273" y1="72.8" x2="199.3" y2="105.9"/>
+	<g>
+		
+			<line fill="none" stroke="#71AB0F" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="3,3" x1="273" y1="72.8" x2="209.6" y2="101.3"/>
+		<g>
+			<polygon fill="#71AB0F" points="199.3,105.9 211.1,93.4 210.4,100.9 216.5,105.3 			"/>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 110.81 112.7883)"><tspan x="0" y="0" fill="#333333" font-family="'KievitOT-Bold'" font-size="20px">Channel-</tspan><tspan x="0" y="24" fill="#333333" font-family="'KievitOT-Bold'" font-size="20px">indexing</tspan><tspan x="0" y="48" fill="#333333" font-family="'KievitOT-Bold'" font-size="20px">service</tspan></text>
 </svg>

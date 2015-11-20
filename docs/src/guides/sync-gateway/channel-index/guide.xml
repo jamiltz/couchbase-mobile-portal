@@ -9,7 +9,8 @@
       <item><ref href="../configuration/config-properties.xml">Configuration</ref></item>
    </related>
    <introduction>
-      <paragraph>This guide describes a choice that you face between two kinds of <emphasis>channel indexing</emphasis>. To efficiently fulfill read requests for documents, Sync Gateway performs channel indexing, identifying the document revisions that are assigned to each channel.</paragraph>
+      <paragraph>This guide describes a choice that you face between two kinds of <emphasis>channel indexing</emphasis>. Channels play a central role in controlling read access to document revisions. Every document is associated with a set of channels and every user and role has a set of channels that they're allowed to read.</paragraph>
+      <paragraph>To efficiently fulfill read requests for documents, Sync Gateway performs channel indexing, identifying the document revisions that are assigned to each channel.</paragraph>
    </introduction>
    <articles>
       <xi:include href="intro.xml"/>

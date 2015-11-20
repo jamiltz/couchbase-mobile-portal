@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<article xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../docs.xsd"
+    id="channel-index-scaling">
+            <title>Scaling considerations when using distributed channel indexes</title>
+    <description>Scaling considerations when using distributed channel indexes</description>
+            <introduction>
+                <paragraph></paragraph>
+            </introduction>
+            <topics>
+                <topic id="use-metrics">
+                    <title>Use metrics</title>
+                    <body>
+                        <paragraph></paragraph>
+                    </body>
+                </topic>
+                <topic id="performance-metrics">
+                    <title>Performance metrics</title>
+                    <body>
+                        <paragraph></paragraph>
+                    </body>
+                </topic>
+                <topic id="scaling-data-service">
+                    <title>Scaling the Coucbase Server data service</title>
+                    <body>
+                        <paragraph></paragraph>
+                    </body>
+                </topic>
+                <topic id="scaling-sync-gateway">
+                    <title>Scaling Sync Gateway nodes</title>
+                    <body>
+                        <paragraph></paragraph>
+                    </body>
+                </topic>
+                <topic id="sync-gateway-roles">
+                    <title>Managing the roles of Sync Gateway instances</title>
+                    <body>
+                        <paragraph></paragraph>
+                    </body>
+                </topic>
+            </topics>
+</article>

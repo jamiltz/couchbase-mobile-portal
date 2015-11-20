@@ -87,7 +87,7 @@
                    </row>
                    <row>
                       <entry>
-                         <code>channel_index</code>
+                         <code>channel_index_writers</code>
                       </entry>
                       <entry>Array of configuration properties for distributed channel-index writers</entry>
                       <entry>Distributed channel-index writer settings. See <ref href="#writer-cluster-config">Disributed channel-index writer configuration</ref>.</entry>
@@ -277,7 +277,7 @@
        <topic id="writer-cluster-config">
           <title>Distributed channel-index writer configuration</title>
           <body>
-             <paragraph>Following are server configuration properties for the distributed channel-index writers:</paragraph>
+             <paragraph>Following are server configuration properties for the distributed channel-index writers (in the <code>channel_index_writers</code> array of configuration properties):</paragraph>
              <table>
                 <header>
                    <row>
@@ -292,14 +292,14 @@
                          <code>bucket</code>
                       </entry>
                       <entry><code>string</code></entry>
-                      <entry>Name of the bucket in which Sync Gateway instances that are channel-index writers store information about themselves, for use by the channel-indexing service. There is no default.</entry>
+                      <entry>Name of the <emphasis>channel-indexing service configuration bucket</emphasis>, the bucket in which Sync Gateway instances that are channel-index writers store configuration data about themselves, for use by the channel-indexing service. There is no default.</entry>
                    </row> 
                    <row>
                       <entry>
                          <code>dataDir</code>
                       </entry>
                       <entry><code>string</code></entry>
-                      <entry>Full path of a local directory in which the channel-indexing service can persist metadata. There is no default.</entry>
+                      <entry>Full path of a local directory in which the channel-indexing service can persist some state data. There is no default.</entry>
                    </row>
                    <row>
                       <entry>
@@ -597,7 +597,7 @@
                                <code>bucket</code>
                             </entry>
                             <entry><code>string</code></entry>
-                            <entry>Name of the bucket in which Sync Gateway instances store information about themselves, for use by the channel-indexing service. There is no default.</entry>
+                            <entry>Name of the bucket in which the channel index for the database is stored. There is no default.</entry>
                          </row> 
                          <row>
                             <entry>
