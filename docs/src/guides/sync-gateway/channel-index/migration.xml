@@ -3,11 +3,12 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../../docs.xsd"
     id="migration">
-    <title>Migrating to channel indexing</title>
-    <description>Migrating an existing Sync Gateway deployment to use distributed channel indexing</description>
+    <title>Migrating to using a distributed channel index</title>
+    <description>Migrating an existing Sync Gateway deployment to using a distributed channel index</description>
     <introduction>
-        <note>These instructions are for migrating an <emphasis>existing</emphasis> Sync Gateway deployment to use distributed channel indexing. For instructions about creating a new Sync Gateway deployment that will use distributed channel indexing, see <ref href="deploying-channel-indexing.xml">Migration</ref>.</note>
+        <note>These instructions are for migrating an <emphasis>existing</emphasis> Sync Gateway deployment to use a distributed channel index. For instructions about creating a new Sync Gateway deployment that will use distributed channel indexing, see <ref href="deploying-channel-indexing.xml">Migration</ref>.</note>
         <paragraph></paragraph>
+        <note type="caution">Mixed channel-indexing approaches are not possible. All Sync Gateway instances in a Couchbase Mobile deployment must use either channel caches or a distributed channel indexing. For a Sync Gateway cluster using channel caches, migration to using a distributed channel indexing must happen at the same time for all databases. <strong>After you migrate a deployment, you cannot migrate back.</strong> Migration must be done in a specific manner that requires simultaneous downtime of all Sync Gateway instances.</note>
     </introduction>
     <topics>
         <topic id="configurations">

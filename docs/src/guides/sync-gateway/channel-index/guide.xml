@@ -15,6 +15,7 @@
    <articles>
       <xi:include href="intro.xml"/>
       <xi:include href="comparison.xml"/>
+      <xi:include href="scaling.xml"/>
       <xi:include href="deploying-channel-caches.xml"/>
       <xi:include href="deploying-channel-indexing.xml"/>
       <xi:include href="migration.xml"/>

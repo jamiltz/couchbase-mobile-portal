@@ -3,17 +3,25 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../../docs.xsd"
     id="deploying-channel-indexing">
-            <title>Deploying a new Sync Gateway cluster that uses distributed channel indexing</title>
+            <title>Deploying channel indexing</title>
             <description>Deploying a new Sync Gateway cluster that uses distributed channel indexing</description>
             <introduction>
                 <note>These instructions are for deploying a <emphasis>new</emphasis> Sync Gateway cluster that will use distributed channel indexing. For instructions about migrating an existing Sync Gateway deployment from using channel caches to using distributed channel indexing, see <ref href="migration.xml">Migration</ref>.</note>
                 <paragraph></paragraph>
+                <note type="caution">Mixed channel-indexing approaches are not possible. All Sync Gateway instances in a Couchbase Mobile deployment must use either channel caches or a distributed channel indexing. For a Sync Gateway cluster using channel caches, migration to using a distributed channel indexing must happen at the same time for all databases. <strong>After you migrate a deployment, you cannot migrate back.</strong> Migration must be done in a specific manner that requires simultaneous downtime of all Sync Gateway instances.</note>
             </introduction>
     <topics>
         <topic id="ci-configurations">
             <title>Possible configurations</title>
             <body>
-                <paragraph></paragraph>
+                <paragraph>If you use distributed channel indexes, you must do so for all databases on all Sync Gateway nodes in a Sync Gateway cluster, that is, for all Sync Gateway nodes that serve .</paragraph>
+                <paragraph>To use channel caches, set up the configuration file for all Sync Gateway instances as follows:</paragraph>
+                <unordered-list>
+                    <list-item><emphasis>Include</emphasis> <code>channel_index_writers</code> configuration properties in the configuration file.</list-item>
+                    <list-item>In the <code>database</code> configuration properties <emphasis>for all databases, specify</emphasis> <code>DCPSHARD</code> for the <code>feedType</code>.</list-item>
+                    <list-item>Optionally, <emphasis>include</emphasis> the <code>db_state_changed</code> event handler the databases for which you want to use this webhook event handler.</list-item>
+                </unordered-list>
+                <paragraph>For more information about the configuration properties, see <ref href="../configuration/config-properties.xml">Configuration using a configuration file</ref>.</paragraph>
             </body>
     </topic>
     <topic id="ci-deployment-summary">

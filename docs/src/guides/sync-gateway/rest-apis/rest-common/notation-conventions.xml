@@ -10,10 +10,10 @@
                 <paragraph>Within the paths of the URIs presented in these guides:</paragraph>
                 <unordered-list>
                    <list-item>
-                      <paragraph>Path segments that start with an underscore character are static path segments of the URI that you use exactly as shown, for example: <code>_replicate</code>.</paragraph>
+                      Path segments that start with an underscore character are static path segments of the URI that you use exactly as shown, for example: <code>_replicate</code>.
                    </list-item>
                    <list-item>
-                      <paragraph>Path segments that do not start with an underscore character are variables that you replace with your own values. To emphasize that these path segments are variables, we enclose them in curly braces as a reminder, for example: <code>{db}</code>.</paragraph>
+                      Path segments that do not start with an underscore character are variables that you replace with your own values. To emphasize that these path segments are variables, we enclose them in curly braces as a reminder, for example: <code>{db}</code>.
                       <note>Some places in the documentation, you also will see angle brackets used as the indication of a variable path segment, for example, <code>&lt;db&gt;</code>.</note>
                    </list-item>
                 </unordered-list>

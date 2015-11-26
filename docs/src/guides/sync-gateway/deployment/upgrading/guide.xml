@@ -8,6 +8,7 @@
    <introduction>
       <paragraph>This guide describes how to upgrade Sync Gateway. Several online approaches are possible, which do not interrupt traffic between Couchbase Lite databases and the Couchbase Server cluster. An offline upgrade is also possible.</paragraph>
       <note>Commands in this guide are for the CentOS operating system. Commands for other operating systems might differ.</note>
+      <note type="caution">If you plan to migrate to use of a distributed channel index, you can do so during a Sync Gateway upgrade. In this case, you must perform an offline upgrade. Alternatively, you can perform the migration later. For more information, see <ref href="../../channel-index/migration.xml">Migrating to using a distributed channel index</ref>.</note>
    </introduction>
    <articles>
       <xi:include href="upgrade-overview.xml"/>

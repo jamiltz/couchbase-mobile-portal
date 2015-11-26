@@ -149,12 +149,6 @@
 	<text transform="matrix(1 0 0 1 1404.1213 217.3051)" fill="#333333" font-family="'KievitOT-Medium'" font-size="24px">Offline</text>
 </g>
 <text transform="matrix(1 0 0 1 1132.8953 -65.9257)" enable-background="new    "><tspan x="0" y="0" fill="#333333" font-family="'KievitOT-Medium'" font-size="21.6978px">Configuration file </tspan><tspan x="0" y="26" fill="#333333" font-family="'KievitOT-Medium'" font-size="21.6978px">(database online)</tspan></text>
-<rect x="1132.9" y="-22" fill="#FFFFFF" stroke="#333333" stroke-width="2" stroke-miterlimit="10" width="61" height="76"/>
-<image overflow="visible" width="333" height="452" xlink:href="../Config-file-cropped.png"  transform="matrix(0.1602 0 0 0.1602 1136.7253 -20.201)">
-</image>
-<rect x="1132.9" y="336" fill="#FFFFFF" stroke="#333333" stroke-width="2" stroke-miterlimit="10" width="61" height="76"/>
-<image overflow="visible" width="333" height="452" xlink:href="../Config-file-cropped.png"  transform="matrix(0.1602 0 0 0.1602 1136.7253 337.799)">
-</image>
 <g>
 	
 		<rect x="1514.9" y="545.3" fill="#FFFFFF" stroke="#0059C1" stroke-width="3" stroke-miterlimit="10" width="161.7" height="88.6"/>
@@ -198,9 +192,6 @@
 	<rect x="1478.1" y="113.8" fill="#FFC425" width="87.8" height="29"/>
 	<text transform="matrix(1 0 0 1 1484.6454 134.5481)" fill="#333333" font-family="'KievitOT-Medium'" font-size="21.6978px">Starting</text>
 </g>
-<rect x="1616.6" y="451.7" fill="#FFFFFF" stroke="#333333" stroke-width="2" stroke-miterlimit="10" width="61" height="41.4"/>
-<image overflow="visible" width="360" height="246" xlink:href="db_config_load.png"  transform="matrix(0.1514 0 0 0.1514 1619.392 452.4324)">
-</image>
 <g>
 	<rect x="1389.4" y="237.2" fill="#FFC425" width="96.6" height="29"/>
 	<text transform="matrix(1 0 0 1 1396.1688 258.0105)" fill="#333333" font-family="'KievitOT-Medium'" font-size="21.6978px">Stopping</text>
@@ -234,9 +225,9 @@
 </g>
 <g>
 	<g>
-		<line fill="none" stroke="#7F7F7F" stroke-width="3" stroke-miterlimit="10" x1="1644.3" y1="493.3" x2="1643.3" y2="495"/>
+		<line fill="none" stroke="#7F7F7F" stroke-width="3" stroke-miterlimit="10" x1="1639.7" y1="501.6" x2="1638.8" y2="503.3"/>
 		
-			<line fill="none" stroke="#7F7F7F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="4.1344,4.1344" x1="1641.3" y1="498.7" x2="1618.5" y2="540.4"/>
+			<line fill="none" stroke="#7F7F7F" stroke-width="3" stroke-miterlimit="10" stroke-dasharray="4.0294,4.0294" x1="1636.9" y1="506.8" x2="1618.5" y2="540.4"/>
 		<line fill="none" stroke="#7F7F7F" stroke-width="3" stroke-miterlimit="10" x1="1617.5" y1="542.2" x2="1616.6" y2="544"/>
 	</g>
 </g>
@@ -251,5 +242,17 @@
 		<circle fill="#FF8900" cx="1481.7" cy="599.9" r="18.8"/>
 	</g>
 	<text transform="matrix(1 0 0 1 1474.3412 606.0609)" fill="#FFFFFF" font-family="'KievitOT-Bold'" font-size="36px">7</text>
+</g>
+<g>
+	<rect x="1140.3" y="-21.3" fill="#FFFFFF" stroke="#333333" stroke-width="2" stroke-miterlimit="10" width="63.7" height="76"/>
+	<text transform="matrix(1 0 0 1 1143.9688 -12.8582)" enable-background="new    "><tspan x="0" y="0" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">{</tspan><tspan x="0" y="8.4" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">  &quot;interface&quot;:&quot;:4984</tspan><tspan x="0" y="16.8" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">  &quot;adminInterface&quot;</tspan><tspan x="0" y="25.2" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">  &quot;log&quot;:[&quot;REST&quot;],</tspan><tspan x="0" y="33.6" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">  &quot;databases&quot;:{</tspan><tspan x="0" y="42" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">    &quot;sync_gateway&quot;</tspan><tspan x="0" y="50.4" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">    &quot;server&quot;:&quot;http</tspan><tspan x="0" y="58.8" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">    &quot;bucket&quot;:&quot;sync</tspan></text>
+</g>
+<g>
+	<rect x="1140.3" y="336" fill="#FFFFFF" stroke="#333333" stroke-width="2" stroke-miterlimit="10" width="63.7" height="76"/>
+	<text transform="matrix(1 0 0 1 1143.9688 344.4229)" enable-background="new    "><tspan x="0" y="0" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">{</tspan><tspan x="0" y="8.4" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">  &quot;interface&quot;:&quot;:4984</tspan><tspan x="0" y="16.8" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">  &quot;adminInterface&quot;</tspan><tspan x="0" y="25.2" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">  &quot;log&quot;:[&quot;REST&quot;],</tspan><tspan x="0" y="33.6" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">  &quot;databases&quot;:{</tspan><tspan x="0" y="42" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">    &quot;sync_gateway&quot;</tspan><tspan x="0" y="50.4" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">    &quot;server&quot;:&quot;http</tspan><tspan x="0" y="58.8" fill="#333333" font-family="'KievitOT-Medium'" font-size="7px">    &quot;bucket&quot;:&quot;sync</tspan></text>
+</g>
+<g>
+	<rect x="1612.9" y="425.2" fill="#FFFFFF" stroke="#333333" stroke-width="2" stroke-miterlimit="10" width="63.7" height="76"/>
+	<text transform="matrix(1 0 0 1 1613.4578 439.3514)" enable-background="new    "><tspan x="0" y="0" fill="#333333" font-family="'KievitOT-Medium'" font-size="8px">    {</tspan><tspan x="0" y="9.6" fill="#333333" font-family="'KievitOT-Medium'" font-size="8px">    &quot;server&quot;:&quot;http</tspan><tspan x="0" y="19.2" fill="#333333" font-family="'KievitOT-Medium'" font-size="8px">    &quot;bucket&quot;:&quot;sync_</tspan><tspan x="0" y="28.8" fill="#333333" font-family="'KievitOT-Medium'" font-size="8px">    &quot;revs_limit&quot;:5,</tspan><tspan x="0" y="38.4" fill="#333333" font-family="'KievitOT-Medium'" font-size="8px">    &quot;rev_cache_siz</tspan><tspan x="0" y="48" fill="#333333" font-family="'KievitOT-Medium'" font-size="8px">    }</tspan></text>
 </g>
 </svg>

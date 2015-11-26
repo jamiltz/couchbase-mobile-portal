@@ -3,12 +3,16 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:noNamespaceSchemaLocation="../../../docs.xsd"
     id="channel-indexing-intro">
-            <title>Channel indexing</title>
+            <title>Introduction to channel indexing</title>
             <description>Introduction to channel indexing</description>
             <introduction>
-                <paragraph>To efficiently fulfill read requests for documents, Sync Gateway performs channel indexing, identifying the document revisions that are assigned to each channel.</paragraph>
-                <paragraph>Sync Gateway 1.2 supports two approaches to channel indexing: using local channel caches and using a distributed channel index. Details about these approaches are below.</paragraph>
-                <note type="caution">Mixed channel-indexing approaches are not possible. All Sync Gateway instances in a Couchbase Mobile deployment must be migrated to using the distributed channel-indexing service at the same time, for all databases. <strong>After you migrate a deployment, you cannot migrate back.</strong> Migration must be done in a specific manner that requires simultaneous downtime of all Sync Gateway instances.</note>
+                <paragraph>To efficiently fulfill read requests for documents, Sync Gateway performs channel indexing, identifying the document revisions that are assigned to each channel and string the information in an index.</paragraph>
+                <paragraph>Beginning with Couchbase Mobile 1.2, all Sync Gateway instances in a Couchbase Mobile deployment can take one of two approaches to channel indexing (for all databases in the deployment):</paragraph>
+                <unordered-list>
+                    <list-item><strong>Local channel caches</strong> (sole approach in Sync Gateway 1.1): Each Sync Gateway instance writes a local, in-memory cache of the channel assignments of documents that have been modified recently. Channel caches do not contain complete channel indexes. When necessary, Sync Gateway instances can obtain channel-assignment information that is not in the local cache. Each Sync Gateway instance writes channel-assignment information to its local cache for all document modifications.</list-item>
+                    <list-item><strong>Distributed channel index</strong> (new in Sync Gateway 1.2): All Sync Gateway instances read from the same channel index, which is stored in a Couchbase Server bucket. Sync Gateway instances that are identified as channel-index writers write to the channel index. The channel index is a complete index of the channel assignments of all document revisions.</list-item>
+                </unordered-list>
+                <note type="caution">Mixed channel-indexing approaches are not possible, either for a group of databases served by a specific Sync Gateway instance or for a group of Sync Gateway instances serving the same database. For an <emphasis>intersecting set</emphasis> of Sync Gateway instances and databases, all Sync Gateway instances <emphasis>must</emphasis> use either channel caches or the distributed channel-indexing service. Two or more <emphasis>disjoint sets</emphasis> of Sync Gateway instances and databases can use different channel-indexing approaches. For an intersecting set of Sync Gateway instances and databases that use channel caches, migration to using the distributed channel-indexing service must happen at the same time for all Sync Gateway instances and databases in the set. <strong>After you migrate a deployment, you cannot migrate back.</strong> Migration must be done in a specific manner that requires simultaneous downtime of all Sync Gateway instances in the interesecting set.</note>
             </introduction>
             <topics>
                 <topic id="about-channels">
@@ -22,21 +26,11 @@
                         <paragraph>For more information about channels, see <ref href="../3-channel-development.xml">Data routing with channels</ref>.</paragraph>
                     </body>
                 </topic>
-                <topic id="two-approaches">
-                    <title>Two approaches for channel indexing</title>
-                    <body>
-                        <paragraph>Beginning with Couchbase Mobile 1.2, all Sync Gateway instances in a Couchbase Mobile deployment can take one of two approaches to channel indexing (for all databases in the deployment):</paragraph>
-                        <unordered-list>
-                            <list-item><strong>Local channel caches</strong> (Sole approach in Sync Gateway 1.1): Each Sync Gateway instance writes a local, in-memory cache of the channel assignments of documents that have been modified recently. Channel caches do not contain complete channel indexes. When necessary, Sync Gateway instances can obtain channel-assignment information that is not in the local cache. Each Sync Gateway instance writes channel-assignment information to its local cache for all document modifications.</list-item>
-                            <list-item><strong>Distributed channel index</strong> (New in Sync Gateway 1.2): All Sync Gateway instances read from the same channel index, which is stored in a Couchbase Server bucket. Sync Gateway instances that are identified as channel-index writers write to the channel index. The channel index is a complete index of the channel assignments of all document revisions.</list-item>
-                        </unordered-list>
-                    </body>
-                </topic>
                 <topic id="channel-caches">
                     <title>Using local channel caches</title>
                     <body>
                         <paragraph>This drawing illustrates use of local channel caches. Numbers identify key points that are explained below the drawing.</paragraph>
-                        <image href="images/channel-caches.svg" alt="Local channel caches"/>
+                        <image href="images/channel-caches.svg" width="80%" alt="Local channel caches"/>
                         <paragraph>In the drawing:</paragraph>
                         <ordered-list>
                             <list-item>Sync Gateway instances communicate with data-service nodes in a Couchbase cluster. Application data flows between each Sync Gateway instance and the application-data bucket.</list-item>
@@ -49,7 +43,7 @@
                     <title>Using a distributed channel index</title>
                     <body>
                         <paragraph>This drawing illustrates use of a channel index. Numbers identify key points that are explained below the drawing.</paragraph>
-                        <image href="images/channel-index.svg" alt="Distributed channel index"/>
+                        <image href="images/channel-index.svg" width="80%" alt="Distributed channel index"/>
                         <ordered-list>
                             <list-item>Sync Gateway instances communicate with data-service nodes in a Couchbase cluster. Application data flows between each Sync Gateway instance and the application-data bucket.</list-item>
                             <list-item>A channel-indexing service in Sync Gateway can write to and reads from a channel index that is stored in a bucket in Couchbase Server.</list-item>
@@ -63,21 +57,43 @@
                     <title>Sharding of the DCP mutation feed</title>
                     <body>
                         <paragraph>When using a distributed channel index, the DCP mutation feed is sharded and the shards are distributed across Sync Gateway instances.</paragraph>
-                        <paragraph>This drawing illustrates use of local channel caches. Numbers identify key points that are explained below the drawing.</paragraph>
+                        <paragraph>This drawing illustrates sharding. Numbers identify key points that are explained below the drawing.</paragraph>
                         <note>The DCP mutation feed to a specific Sync Gateway instance is a single feed. Arrows in this drawing and the next drawing indicate logical mappings of shards to Sync Gateway instances, not the feeds.</note>
-                        <image href="images/shards.svg" alt="Shards"/>
+                        <image href="images/shards.svg" width="80%" alt="Shards"/>
                         <paragraph>In the drawing:</paragraph>
                         <ordered-list>
-                            <list-item>The app data bucket in the Couchbase cluster consists of vBuckets that are distributed across the Couchbase Server nodes that are running the data service (four nodes are shown here). For simplicity's sake, only vBuckets 0-15 are shown. The "M" indicates that these vBuckets are masters. Replicas are not shown in this drawing. Sync Gateway instances make and then use a consistent and unchanging assignment of vBuckets to shards. In this drawing, vBuckets 0 and 1 are in one shard (indicated by the color purple), 2 and 3 in the next (aqua), and so forth.</list-item>
+                            <list-item>The app data bucket in the Couchbase cluster consists of vBuckets that are distributed across the Couchbase Server nodes that are running the data service (four nodes are shown here). For simplicity's sake, only vBuckets 0-15 are shown. The "M" indicates that these vBuckets are masters. Replicas are not shown in this drawing. Replica vBuckets are used if master vBuckets are not available.<paragraph>Sync Gateway instances make and then use a consistent and unchanging assignment of vBuckets to shards. In this drawing, vBuckets 0 and 1 are in one shard (indicated by the color purple), 2 and 3 in the next (aqua), and so forth.</paragraph></list-item>
                             <list-item>Sync Gateway instances that are channel-index writers distribute shards of the DCP mutation feed among themselves. For example, channel-index writer 1 monitors the shard of the DCP mutation feed that encompasses vBuckets 0, 1, 4, and 5; while channel-index writer 2 monitors the shard of the DCP mutation feed that encompasses vBuckets 8, 9, 12, and 13.</list-item>
                         </ordered-list>
-                        <paragraph>If a Sync Gateway instance goes down, then the shards of the DCP mutation feed that it was handling are redistributed to running Sync Gateway instances. This drawing illustrates redistribution of shards. Numbers identify key points that are explained below the drawing.</paragraph>
-                        <image href="images/shards-redistributed.svg" alt="Redistribution of shards"/>
+                        <paragraph>In specific circumstances, the shards of the DCP mutation feed that a Sync Gateway instance is handling are redistributed to other Sync Gateway instances. The circumstances are:</paragraph>
+                        <unordered-list>
+                            <list-item>When a Sync Gateway instance goes down</list-item>
+                            <list-item>If network communication between a Sync Gateway instance and the Couchbase cluster is interrupted for a period of time longer than the value of the configuration property <code>heartbeatInterval</code></list-item>
+                            <list-item></list-item>
+                        </unordered-list>
+                        <note>Shards of the DCP mutation feed are <emphasis>not</emphasis> redistributed when a database is taken offline.</note>
+                        <paragraph>This drawing illustrates redistribution of shards when a Sync Gateway instance goes down. Numbers identify key points that are explained below the drawing.</paragraph>
+                        <image href="images/shards-redistributed.svg" width="80%" alt="Redistribution of shards"/>
                         <paragraph>In the drawing:</paragraph>
                         <ordered-list>
-                            <list-item>As in the prior drawing, the app data bucket in the Couchbase cluster consists of vBuckets that are distributed across the Couchbase Server nodes that are running the data service and Sync Gateway instances make and then use a consistent and unchanging assignment of vBuckets to shards.</list-item>
+                            <list-item>As in the prior drawing, the app data bucket in the Couchbase cluster consists of vBuckets that are distributed across the Couchbase Server nodes that are running the data service. Sync Gateway instances make and then use a consistent and unchanging assignment of vBuckets to shards.</list-item>
                             <list-item>What has changed is that Sync Gateway instance 1, a channel-index writer, has gone down.</list-item>
-                            <list-item>Sync Gateway instances that are channel-index wrtiers discover the absence of channel-index writer 1, and they redistribute shards of the DCP mutation feed among themselves, so that all shards are assigned to channel-index writers. In this case, the shard of the DCP mutation feed that encompasses vBuckets 0 and 1 has been given to channel-index writer 3, and the shard of the DCP mutation feed that encompasses vBuckets 4 and 5 has been given to channel-index writer 2. If channel-index writer 1 comes back online, the Sync Gateway instances will discover that too, and will again redistribute shards.</list-item>
+                            <list-item>Sync Gateway instances that are channel-index writers discover the absence of channel-index writer 1, and they redistribute shards of the DCP mutation feed among themselves, so that all shards are assigned to channel-index writers. In this case, the shard of the DCP mutation feed that encompasses vBuckets 0 and 1 has been given to channel-index writer 3, and the shard of the DCP mutation feed that encompasses vBuckets 4 and 5 has been given to channel-index writer 2. If channel-index writer 1 comes back online, the Sync Gateway instances will discover that too, and will again redistribute shards.</list-item>
+                        </ordered-list>
+                    </body>
+                </topic>
+                <topic id="intersecting-sets">
+                    <title>Intersecting and disjoint sets of Sync Gateway instances and databases</title>
+                    <body>
+                        <note>If all of your Sync Gateway instances and all of the databases in a Couchbase cluster form an intersecting set, then the set can either use channel caches or a single distributed channel index. The cases explained here are relevant when you have disjoint sets of Sync Gateway instances and Couchbase Server databases.</note>
+                        <paragraph>One or the other of the channel-indexing approaches <emphasis>must</emphasis> be used in an <emphasis>intersecting set</emphasis> of Sync Gateway instances and Couchbase Server databases. In <emphasis>disjoint sets</emphasis> of Sync Gateway instances and Couchbase Server databases, different approaches can be used, but only one intersecting set can use the distributed channel index. A disjoint set is two or more intersecting sets that do not intersect.</paragraph>
+                        <paragraph>This drawing illustrates intersecting and disjoint sets. Numbers identify key points that are explained below the drawing.</paragraph>
+                        <image href="images/disjoint.svg" width="80%" alt="Intersecting and disjoint sets"/>
+                        <paragraph>In the drawing:</paragraph>
+                        <ordered-list>
+                            <list-item>The intersecting set of Sync Gateways 1, 2, and 3; and databases A, B, and C use a single distributed channel index.</list-item>
+                            <list-item>Because the intersecting set of Sync Gateways 4, 5, and 6; and databases D and E are disjoint with respect to the first set, they can use channel caches.</list-item>
+                            <list-item>If one intersecting set of Sync Gateway instances and Couchbase Server databases uses a distributed channel index, then you cannot use a distributed channel index in any disjoint sets.</list-item>
                         </ordered-list>
                     </body>
                 </topic>

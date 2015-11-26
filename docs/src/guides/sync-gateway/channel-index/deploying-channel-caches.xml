@@ -7,18 +7,32 @@
     <description>Setting up a new Sync Gateway deployment that uses channel caches</description>
     <introduction>
         <paragraph></paragraph>
+        <note type="caution">Mixed channel-indexing approaches are not possible. All Sync Gateway instances in a Couchbase Mobile deployment must use either channel caches or a distributed channel index. For information about migration from using channel caches to using the distributed channel index, see <ref href="migration.xml">Migration to using a distributed channel index</ref>.</note>
     </introduction>
     <topics>
-        <topic id="configuration">
-            <title>Configuration</title>
+        <topic id="cc-configurations">
+            <title>Possible configuration</title>
             <body>
-                <paragraph></paragraph>
+                <paragraph>Only one configuration is possible: using channel caches on all Sync Gateway nodes.</paragraph>
+                <paragraph>To use channel caches, set up the configuration file for all Sync Gateway instances as follows:</paragraph>
+                <unordered-list>
+                    <list-item><emphasis>Omit</emphasis> <code>channel_index_writers</code> configuration properties from the configuration file.</list-item>
+                    <list-item>In the <code>database</code> configuration properties <emphasis>for all databases, specify</emphasis> <code>DCP</code> or <code>TAP</code> for the <code>feedType</code>.</list-item>
+                    <list-item><emphasis>Omit</emphasis> the <code>db_state_changed</code> event handler (which is used for webhooks) for all of the databases.</list-item>
+                </unordered-list>
+                <paragraph>For more information about the configuration properties, see <ref href="../configuration/config-properties.xml">Configuration using a configuration file</ref>.</paragraph>
             </body>
         </topic>
-        <topic id="deployment-notes">
-            <title>Deployment notes</title>
+        <topic id="cc-deployment-summary">
+            <title>Summary of deployment tasks</title>
             <body>
-                <paragraph></paragraph>
+                <paragraph>Deployment tasks for running Sync Gateway instances that use channel caches are:</paragraph>
+                <ordered-list>
+                    <list-item>Creating Couchbase Server databases that the Sync Gateway instances will serve. For more information, see the <external-ref href="http://developer.couchbase.com/guides-and-references">Couchbase Server documentation</external-ref>.</list-item>
+                    <list-item>Installing Sync Gateway instances. For more information, see <ref href="../running-sync-gateway/installing-sync-gateway.xml">Installing Sync Gateway</ref>.</list-item>
+                    <list-item>Creating configuration files for your deployment. See the notes above in <ref href="../running-sync-gateway/installing-sync-gateway.xml">Possible configuration</ref>. For more information about configuration files, see <ref href="../configuration/config-properties.xml">Configuration using a configuration file</ref>.</list-item>
+                    <list-item>Starting Sync Gateway instances. For more information, see <ref href="../running-sync-gateway/starting-and-stopping-sync-gateway.xml">Starting and stopping Sync Gateway</ref>.</list-item>
+                </ordered-list>
             </body>
         </topic>
     </topics>
