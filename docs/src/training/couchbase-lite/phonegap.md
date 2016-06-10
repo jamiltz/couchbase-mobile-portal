@@ -35,7 +35,7 @@ if (window.cblite) {
 }
 ```
 Below the `onDeviceReady` method, add a new method called `logMessage`.
-```
+```js
 logMessage: function(message) {
   var p = document.createElement("p");
   p.innerHTML = message;
