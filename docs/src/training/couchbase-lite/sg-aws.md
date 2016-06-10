@@ -16,6 +16,7 @@
     /opt/couchbase-sync-gateway/bin/sync_gateway -interface=0.0.0.0:4984 -url=http://localhost:8091 -bucket=sync_gateway -dbname=sync_gateway
     ```
 - You should see output like this:
+
     ```
     2015-11-03T19:37:05.384Z ==== Couchbase Sync Gateway/1.1.0(28;86f028c) ====
     2015-11-03T19:37:05.384Z Opening db /sync_gateway as bucket "sync_gateway", pool "default", server <http://localhost:8091>
@@ -47,4 +48,4 @@ For more advanced Sync Gateway configuration, you will want to create a JSON con
 In order to login to the Couchbase Server UI, go to :8091 and use:
 
 Username: Administrator
-Password: <aws instance id, eg: i-8a9f8335>
+Password: `aws instance id, eg: i-8a9f8335`
