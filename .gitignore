@@ -5,3 +5,4 @@ site/*.zip
 samples/
 node_modules/
 tutorial/
+*.sketch
