@@ -2,3 +2,6 @@
 site/gen*
 site/*.zip
 .idea/
+samples/
+node_modules/
+tutorial/
