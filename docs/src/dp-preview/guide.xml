@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<guide 
+        xmlns:xi="http://www.w3.org/2001/XInclude"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../docs.xsd"
+        id="dp-preview">
+  <title>1.3 Developer Preview</title>
+  <description>This guide will give you an overview of the features that will ship as part of Couchbase 
+    Mobile 1.3</description>
+  <introduction>
+    <paragraph>This guide will give you an overview of the features that will ship as part of Couchbase
+      Mobile 1.3.</paragraph>
+    <paragraph>Download the Developer Preview of Couchbase Mobile 1.3 from the links below.</paragraph>
+    <unordered-list>
+      <list-item>iOS</list-item>
+      <list-item>Android</list-item>
+      <list-item>.NET</list-item>
+      <list-item>macOS</list-item>
+    </unordered-list>
+    <topic>
+      <body>
+        <section>
+          <title>Document expiration (TTL)</title>
+          <body>
+            
+          </body>
+        </section>
+        <section>
+          <title>OpenID Connect</title>
+          <body>
+            
+          </body>
+        </section>
+        <section>
+          <title>Replication between Sync Gateways</title>
+          <body>
+            
+          </body>
+        </section>
+        <section>
+          <title>SG Collect Info</title>
+          <body>
+            
+          </body>
+        </section>
+      </body>
+    </topic>
+  </introduction>
+</guide>
