@@ -266,12 +266,6 @@ paths:
       parameters:
         - $ref: '#/parameters/new_edits'
         - $ref: '#/parameters/rev'
-        - in: body
-          name: body
-          description: Document request body
-          required: false
-          schema:
-            $ref: '#/definitions/Document'
       summary: Create or update document
       description: |
         This request creates a new document or creates a new revision of an existing document. It enables you to specify the identifier for a new document rather than letting the software create an identifier. If you want to create a new document and let the software create an identifier, use the POST /db request.
@@ -464,11 +458,6 @@ paths:
           description: Indicates whether to assign new revision identifiers to new edits.
           required: true
           type: boolean
-        - in: body
-          name: body
-          description: The request body definition
-          schema:
-            $ref: '#/definitions/BulkDocs'
       responses:
         201:
           description: Documents have been created or updated
@@ -712,22 +701,6 @@ definitions:
         description: Indicates whether the operation was successful
   InvalidJSON:
     description: The request provided invalid JSON data
-  Document:
-    type: object
-    properties:
-      _rev:
-        type: string
-        description: (Optional) The revision of the current revision
-      _id:
-        type: string
-        description: The document ID
-  BulkDocs:
-    type: object
-    properties:
-      docs:
-        type: array
-        items:
-          - $ref: '#/definitions/Document'
   View:
     type: object
     properties:
