@@ -30,13 +30,15 @@
         <xsl:apply-templates select="*"/>
     </xsl:for-each>
 
-    <xsl:for-each select="site-map/landing-pages">
-        <xsl:apply-templates select="*"/>
-    </xsl:for-each>
+    <!--<xsl:for-each select="site-map/landing-pages">-->
+        <!--<xsl:apply-templates select="*"/>-->
+    <!--</xsl:for-each>-->
     
-    <xsl:for-each select="site-map/(item | group/item)">
-        <xsl:apply-templates select="set | guide | class | article | lesson | page | xhtml-page | api | hippo-root"/>
-    </xsl:for-each>
+    <!--<xsl:for-each select="site-map/(item | group/item)">-->
+        <!--<xsl:apply-templates select="set | guide | class | article | lesson | page | xhtml-page | api | hippo-root"/>-->
+    <!--</xsl:for-each>-->
+  
+  <xsl:apply-templates select="(site-map | site-map/landing-pages)/(set | guide | class | article | lesson | page | xhtml-page | api)"/>
     
     <!-- Copy Resources -->
     <xsl:variable name="source-base-directory" select="string(file:getParent(file:new(base-uri())))"/>
