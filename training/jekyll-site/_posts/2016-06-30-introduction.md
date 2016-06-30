@@ -9,7 +9,7 @@ categories: jekyll update
     - [Course Outline](#course-outline)
     - [A Quick Note About Data Modeling](#a-quick-note-about-data-modeling)
 
-[EDIT ON GITHUB]()
+[EDIT ON GITHUB](https://github.com/couchbaselabs/couchbase-mobile-portal/pull/371)
 
 # Introduction
 
