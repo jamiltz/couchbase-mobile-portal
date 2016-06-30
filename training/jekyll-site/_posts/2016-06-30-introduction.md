@@ -1,13 +1,15 @@
 ---
 layout: post
 title:  "Introduction"
-date:   2016-06-30 14:57:23 +0100
+date:   2016-06-30 15:57:23 +0100
 categories: jekyll update
 ---
 
 - [Introduction](#introduction)
     - [Course Outline](#course-outline)
     - [A Quick Note About Data Modeling](#a-quick-note-about-data-modeling)
+
+[EDIT ON GITHUB]()
 
 # Introduction
 
