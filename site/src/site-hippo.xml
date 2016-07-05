@@ -21,21 +21,9 @@
   <head>
   </head>
   <site-map>
-    <top>
-      <xi:include href="home-hippo.xml"/>
-    </top>
-    <set id="get-started">
-      <title>Get Started</title>
-      <description>Text</description>
-      <introduction></introduction>
-      <items>
-        <xi:include href="../../docs/src/get-started/couchbase-mobile-overview/guide.xml"/>
-        <xi:include href="../../docs/src/get-started/couchbase-lite-overview/guide.xml"/>
-        <xi:include href="../../docs/src/get-started/what-is-sync-gateway/guide.xml"/>
-        <xi:include href="../../docs/src/get-started/query-sorting/guide.xml"/>
-        <xi:include href="../../docs/src/get-started/set.xml"/>
-      </items>
-    </set>
+    <!--<top>-->
+      <!--<xi:include href="home-hippo.xml"/>-->
+    <!--</top>-->
     <set id="develop">
       <title>Develop</title>
       <description>Develop</description>
@@ -45,7 +33,7 @@
           <title>Guides</title>
           <description></description>
           <items>
-            <xi:include href="../../docs/src/guides/modeling/guide.xml"/>
+            <!--<xi:include href="../../docs/src/guides/modeling/guide.xml"/>-->
             <xi:include href="../../docs/src/guides/couchbase-lite/set.xml"/>
             <xi:include href="../../docs/src/guides/sync-gateway/set.xml"/>
           </items>
@@ -64,9 +52,9 @@
                 </paragraph>
               </introduction>
               <items>
-                <xi:include href="../../apis/couchbase-lite/src/api.xml"/>
-                <xi:include href="../../docs/src/guides/couchbase-lite/rest-api/set.xml"/>
-                <xi:include href="../../docs/src/guides/couchbase-lite/release-notes.xml"/>
+                <!--<xi:include href="../../apis/couchbase-lite/src/api.xml"/>-->
+                <!--<xi:include href="../../docs/src/guides/couchbase-lite/rest-api/set.xml"/>-->
+                <!--<xi:include href="../../docs/src/guides/couchbase-lite/release-notes.xml"/>-->
               </items>
             </set>
             <set id="sync-gateway">
@@ -79,10 +67,10 @@
                 </paragraph>
               </introduction>
               <items>
-                <xi:include href="../../docs/src/guides/sync-gateway/rest-apis/rest-common/guide.xml"/>
-                <xi:include href="../../docs/src/guides/sync-gateway/rest-apis/public-rest-api/set.xml"/>
-                <xi:include href="../../docs/src/guides/sync-gateway/rest-apis/admin-rest-api/set.xml"/>
-                <xi:include href="../../docs/src/guides/sync-gateway/release-notes.xml"/>
+                <!--<xi:include href="../../docs/src/guides/sync-gateway/rest-apis/rest-common/guide.xml"/>-->
+                <!--<xi:include href="../../docs/src/guides/sync-gateway/rest-apis/public-rest-api/set.xml"/>-->
+                <!--<xi:include href="../../docs/src/guides/sync-gateway/rest-apis/admin-rest-api/set.xml"/>-->
+                <!--<xi:include href="../../docs/src/guides/sync-gateway/release-notes.xml"/>-->
               </items>
             </set>
           </items>
@@ -92,7 +80,7 @@
           <description>Text</description>
           <introduction></introduction>
           <items>
-            <xi:include href="develop/samples.xml"/>
+            <!--<xi:include href="develop/samples.xml"/>-->
           </items>
         </set>
       </items>

@@ -2,6 +2,8 @@
 # Constants
 PREFIX="gen-hippo"
 SOURCE_FOLDER="../${PREFIX}"
+JEKYLL_SOURCE="../../site-new"
+JEKYLL_DESTINATION="../${PREFIX}"
 COMMAND_NAME="${PREFIX}"
 COMMAND="./${COMMAND_NAME}"
 
@@ -18,6 +20,13 @@ if [[ ${1} = "build" ]]; then
 	echo "Building..."
 	rm -rf ${SOURCE_FOLDER}
 	${COMMAND}
+fi
+
+# Create Jekyll site
+if [[ ${1} = "jekyll" ]]; then
+	echo "Building Jekyll..."
+	jekyll build --source "${JEKYLL_SOURCE}" --destination "${JEKYLL_DESTINATION}"
+	exit 0
 fi
 
 if [[ ${2} = "push" ]]; then
