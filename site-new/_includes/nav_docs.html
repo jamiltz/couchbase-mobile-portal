@@ -1,0 +1,33 @@
+<div class="nav-docs">
+  <!-- Docs Nav -->
+  {% for section in site.data.nav_docs %}
+  <div class="nav-docs-section">
+    <h3>{{ section.title }}</h3>
+    <ul>
+      {% for item in section.items %}
+      <li>
+        {% if item.path %}
+          <a href="{{ item.path }}">{{ item.title }}</a>
+        {% else %}
+          {{ item | sidebar_item_link}}
+        {% endif %}
+        {% if item.subitems %}
+        <ul>
+          {% for subitem in item.subitems %}
+          <li class="nav-item">
+            {% if subitem.path %}
+              <a href="{{ subitem.path }}">{{ subitem.title }}</a>
+            {% else %}
+              {{ subitem | sidebar_item_link}}
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endfor %}
+  
+</div>
