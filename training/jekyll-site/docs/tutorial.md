@@ -1,15 +1,8 @@
 ---
-layout: post
-title:  "Introduction"
-date:   2016-06-30 15:57:23 +0100
-categories: jekyll update
+id: tutorial
+title: Tutorial
+permalink: tutorial.html
 ---
-
-- [Introduction](#introduction)
-    - [Course Outline](#course-outline)
-    - [A Quick Note About Data Modeling](#a-quick-note-about-data-modeling)
-
-[EDIT ON GITHUB](https://github.com/couchbaselabs/couchbase-mobile-portal/pull/371)
 
 # Introduction
 

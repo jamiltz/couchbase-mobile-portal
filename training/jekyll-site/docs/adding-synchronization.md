@@ -1,16 +1,8 @@
 ---
-layout: post
-title:  "Adding Synchronization"
-date:   2016-06-30 13:57:23 +0100
-categories: jekyll update
+id: adding-synchronization
+title: Adding Synchronization
+permalink: adding-synchronization.html
 ---
-
-- [Adding Synchronization](#adding-synchronization)
-    - [Installation](#installation)
-    - [Synchronization](#synchronization)
-    - [Managing Conflicts](#managing-conflicts)
-
-[EDIT ON GITHUB](https://github.com/couchbaselabs/couchbase-mobile-portal/pull/371)
 
 # Adding Synchronization
 

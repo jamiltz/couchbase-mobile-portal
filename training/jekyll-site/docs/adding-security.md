@@ -1,17 +1,8 @@
 ---
-layout: post
-title:  "Adding Security"
-date:   2016-06-30 12:57:23 +0100
-categories: jekyll update
+id: adding-security
+title: Adding Security
+permalink: adding-security.html
 ---
-
-- [Adding Security](#adding-security)
-    - [Installation](#user-authentication)
-    - [Synchronization](#readwrite-access-controls)
-    - [Database Encryption](#database-encryption)
-    - [Offline Login](#offline-login)
-
-[EDIT ON GITHUB](https://github.com/couchbaselabs/couchbase-mobile-portal/pull/371)
 
 # Adding Security
 

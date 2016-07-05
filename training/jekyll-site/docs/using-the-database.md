@@ -1,22 +1,18 @@
 ---
-layout: post
-title:  "Using the Database"
-date:   2016-06-30 14:57:23 +0100
-categories: jekyll update
+id: using-the-database
+title: Using the Database
+permalink: using-the-database.html
 ---
-
-- [Using the Database](#using-the-database)
-    - [Querying Data](#querying-data)
-    - [Writing Data](#writing-data)
-    - [Aggregating Data](#aggregating-data)
-
-[EDIT ON GITHUB](https://github.com/couchbaselabs/couchbase-mobile-portal/pull/371)
 
 # Using the Database
 
 To save us time coding the user interface for the application, download the starter project below.
 
-[Download starter project](http://cl.ly/1u2x0A0s3v0q/part1_start.zip)
+<div class="buttons-unit downloads">
+  <a href="http://cl.ly/1u2x0A0s3v0q/part1_start.zip" class="button">
+    Download starter project
+  </a>
+</div>
 
 Build & run. You can navigate through the app but nothing gets persisted.
 
