@@ -20,7 +20,7 @@ post:
             description: List containing new or updated documents. Each object in the array can contain the following properties _id, _rev, _deleted, and values for new and updated documents.
             type: array
             items:
-              type: object
+              $ref: '#/definitions/Document'
           new_edits:
             description: Indicates whether to assign new revision identifiers to new edits.
             type: boolean

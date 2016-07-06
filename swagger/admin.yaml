@@ -84,6 +84,8 @@ paths:
           description: yoo
   /{db}/:
     $ref: ./paths/db/db.yaml
+  /{db}/_bulk_docs:
+    $ref: ./paths/db/_bulk_docs.yaml
   /{db}/_compact:
     parameters:
       - $ref: '#/parameters/db'

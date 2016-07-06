@@ -30,6 +30,18 @@ ActiveTasks:
       description: Active requests
       items:
         type: string
+Document:
+  type: object
+  properties:
+    _id:
+      type: string
+      description: The document ID.
+    _rev:
+      type: string
+      description: The revision number.
+    _exp:
+      type: string
+      description: Expiry time. The time (in ISO format) at which the document should be removed.
 DocMetadata:
   type: object
   properties:
