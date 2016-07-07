@@ -31,6 +31,7 @@ dependencies {
     
     
     
+    
     'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.1.1'
     compile 'com.couchbase.lite:couchbase-lite-android:+'
