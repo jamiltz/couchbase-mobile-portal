@@ -26,7 +26,12 @@ compile 'com.couchbase.lite:couchbase-lite-android:+'
 The **dependencies** section should look similar to this.
 ```groovy
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(dir: 
+    
+    
+    
+    
+    'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.1.1'
     compile 'com.couchbase.lite:couchbase-lite-android:+'
 }
