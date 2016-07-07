@@ -33,6 +33,15 @@ dependencies {
 ```
 In the Android Studio tool bar, click **Sync Project with Gradle Files**.
 
+### Supported architectures
+
+The supported Android architectures depends on the storage type (i.e. SQLite or ForestDB).
+For SQLite databases, all architectures are supported, and for ForestDB, the list of supported architectures is the following:
+
+| armeabi-v7a | x86 | arm64-v8a | x86_64 | mips64 | armeabi | mips |
+|:------------|:----|:----------|:-------|:-------|:--------|:-----|
+| Yes         | Yes | Yes       | Yes    | Yes    | No      | No   |
+
 ## Getting Started
 
 Open **com.couchbase.UntitledApp/Main.java** in Android Studio and add the following in the `onCreate` method.
